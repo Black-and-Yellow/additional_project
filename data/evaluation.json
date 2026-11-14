@@ -1,0 +1,10 @@
+[
+ {"query":"Who wrote the novel Frankenstein?","expected":"Mary Shelley","answerable":true},
+ {"query":"What is the capital of Australia?","expected":"Canberra","answerable":true},
+ {"query":"When did the first manned moon landing occur?","expected":"July 20, 1969","answerable":true},
+ {"query":"What element has the atomic number 79?","expected":"Gold","answerable":true},
+ {"query":"Who painted the ceiling of the Sistine Chapel?","expected":"Michelangelo","answerable":true},
+ {"query":"What is the capital of Atlantis?","expected":null,"answerable":false},
+ {"query":"What is the population of Australia?","expected":null,"answerable":false},
+ {"query":"Who won the 2099 robotics championship?","expected":null,"answerable":false}
+]

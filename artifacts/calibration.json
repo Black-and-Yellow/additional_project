@@ -1,0 +1,67 @@
+{
+  "mean": [
+    0.6944079361855984,
+    0.015980971162207425
+  ],
+  "scale": [
+    0.01197448872249374,
+    0.0020345742037486524
+  ],
+  "weights": [
+    0.06533099403487261,
+    -0.8222473248531442,
+    1.7560966673082203
+  ],
+  "schema_version": 1,
+  "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "layers": [
+    26
+  ],
+  "heads": [
+    1
+  ],
+  "threshold": 0.959992979828289,
+  "dataset_sha256": "79ba9d293d925740920a1df35241c42ac33034ec655063d3dc62c421169dc09d",
+  "scope": "Controlled context-consistency calibration. Not a public benchmark or a faithful ReDeEP reproduction.",
+  "split_groups": {
+    "train": [
+      "aster",
+      "birch",
+      "cedar",
+      "dahlia",
+      "elm",
+      "fir",
+      "grove",
+      "hazel",
+      "iris",
+      "juniper",
+      "kestrel",
+      "larch",
+      "maple",
+      "nectar",
+      "olive",
+      "pine"
+    ],
+    "validation": [
+      "quartz",
+      "reed",
+      "spruce",
+      "thistle",
+      "umber",
+      "violet",
+      "willow",
+      "xenia"
+    ],
+    "test": [
+      "amber",
+      "beryl",
+      "coral",
+      "delta",
+      "ember",
+      "flint",
+      "yarrow",
+      "zinnia"
+    ]
+  }
+}

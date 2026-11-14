@@ -1,0 +1,3725 @@
+{
+  "profile": {
+    "mean": [
+      0.6944079361855984,
+      0.015980971162207425
+    ],
+    "scale": [
+      0.01197448872249374,
+      0.0020345742037486524
+    ],
+    "weights": [
+      0.06533099403487261,
+      -0.8222473248531442,
+      1.7560966673082203
+    ],
+    "schema_version": 1,
+    "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "layers": [
+      26
+    ],
+    "heads": [
+      1
+    ],
+    "threshold": 0.959992979828289,
+    "dataset_sha256": "79ba9d293d925740920a1df35241c42ac33034ec655063d3dc62c421169dc09d",
+    "scope": "Controlled context-consistency calibration. Not a public benchmark or a faithful ReDeEP reproduction.",
+    "split_groups": {
+      "train": [
+        "aster",
+        "birch",
+        "cedar",
+        "dahlia",
+        "elm",
+        "fir",
+        "grove",
+        "hazel",
+        "iris",
+        "juniper",
+        "kestrel",
+        "larch",
+        "maple",
+        "nectar",
+        "olive",
+        "pine"
+      ],
+      "validation": [
+        "quartz",
+        "reed",
+        "spruce",
+        "thistle",
+        "umber",
+        "violet",
+        "willow",
+        "xenia"
+      ],
+      "test": [
+        "amber",
+        "beryl",
+        "coral",
+        "delta",
+        "ember",
+        "flint",
+        "yarrow",
+        "zinnia"
+      ]
+    }
+  },
+  "metrics": {
+    "train": {
+      "count": 32,
+      "tp": 2,
+      "fp": 0,
+      "tn": 16,
+      "fn": 14,
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "accuracy": 0.5625,
+      "auroc": 0.87890625,
+      "brier": 0.14492300894851273
+    },
+    "validation": {
+      "count": 16,
+      "tp": 6,
+      "fp": 1,
+      "tn": 7,
+      "fn": 2,
+      "precision": 0.8571428571428571,
+      "recall": 0.75,
+      "f1": 0.8,
+      "accuracy": 0.8125,
+      "auroc": 0.84375,
+      "brier": 0.3368758831210207
+    },
+    "test": {
+      "count": 16,
+      "tp": 3,
+      "fp": 1,
+      "tn": 7,
+      "fn": 5,
+      "precision": 0.75,
+      "recall": 0.375,
+      "f1": 0.5,
+      "accuracy": 0.625,
+      "auroc": 0.734375,
+      "brier": 0.26966227430082157
+    }
+  },
+  "baselines": {
+    "always_faithful": {
+      "count": 16,
+      "tp": 0,
+      "fp": 0,
+      "tn": 8,
+      "fn": 8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.5,
+      "auroc": 0.5,
+      "brier": 0.5
+    },
+    "always_hallucinated": {
+      "count": 16,
+      "tp": 8,
+      "fp": 8,
+      "tn": 0,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.5,
+      "auroc": 0.5,
+      "brier": 0.5
+    }
+  },
+  "measurements": [
+    {
+      "case": {
+        "group": "aster",
+        "split": "train",
+        "query": "When does the Aster laboratory open?",
+        "context": "In the fictional Aster laboratory handbook, the Aster laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Aster.",
+        "answer": "The Aster laboratory opens at 08:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6922965794801712,
+        "pks_nats": 0.051733680069446564,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6273798942565918,
+            "15:1": 0.6326805949211121,
+            "15:2": 0.6117026805877686,
+            "15:3": 0.6552783846855164,
+            "26:0": 0.7282921075820923,
+            "26:1": 0.7128946185112,
+            "26:2": 0.6672050356864929,
+            "26:3": 0.7064859867095947,
+            "28:0": 0.6642667055130005,
+            "28:1": 0.7271363139152527,
+            "28:2": 0.6920377612113953,
+            "28:3": 0.7411095499992371,
+            "29:0": 0.7960567474365234,
+            "29:1": 0.7442629337310791,
+            "29:2": 0.7366805076599121,
+            "29:3": 0.6332754492759705
+          },
+          "pks": {
+            "15": 0.02615443989634514,
+            "26": 0.01607656106352806,
+            "28": 0.03829699009656906,
+            "29": 0.126406729221344
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "aster",
+        "split": "train",
+        "query": "When does the Aster laboratory open?",
+        "context": "In the fictional Aster laboratory handbook, the Aster laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Aster.",
+        "answer": "The Aster laboratory opens at 11:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6925926208496094,
+        "pks_nats": 0.058847066946327686,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6254396438598633,
+            "15:1": 0.6255204677581787,
+            "15:2": 0.6018338203430176,
+            "15:3": 0.6533522605895996,
+            "26:0": 0.7415951490402222,
+            "26:1": 0.6875696182250977,
+            "26:2": 0.6519529819488525,
+            "26:3": 0.7118638753890991,
+            "28:0": 0.6669978499412537,
+            "28:1": 0.7269355654716492,
+            "28:2": 0.6930319666862488,
+            "28:3": 0.7523921728134155,
+            "29:0": 0.8091158270835876,
+            "29:1": 0.7671107053756714,
+            "29:2": 0.7459332942962646,
+            "29:3": 0.6208367347717285
+          },
+          "pks": {
+            "15": 0.028499877080321312,
+            "26": 0.01711931638419628,
+            "28": 0.043734386563301086,
+            "29": 0.14603468775749207
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "birch",
+        "split": "train",
+        "query": "When does the Birch laboratory open?",
+        "context": "In the fictional Birch laboratory handbook, the Birch laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Birch.",
+        "answer": "The Birch laboratory opens at 09:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6366140358150005,
+        "pks_nats": 0.05854811379685998,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5752239227294922,
+            "15:1": 0.5771645307540894,
+            "15:2": 0.583270251750946,
+            "15:3": 0.5930492877960205,
+            "26:0": 0.6415295600891113,
+            "26:1": 0.6886894106864929,
+            "26:2": 0.6029875874519348,
+            "26:3": 0.6677976846694946,
+            "28:0": 0.6058976054191589,
+            "28:1": 0.6683306097984314,
+            "28:2": 0.5333431959152222,
+            "28:3": 0.7075854539871216,
+            "29:0": 0.7239042520523071,
+            "29:1": 0.737579345703125,
+            "29:2": 0.6706061363220215,
+            "29:3": 0.6088657379150391
+          },
+          "pks": {
+            "15": 0.02838558331131935,
+            "26": 0.016193924471735954,
+            "28": 0.06557400524616241,
+            "29": 0.1240389421582222
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "birch",
+        "split": "train",
+        "query": "When does the Birch laboratory open?",
+        "context": "In the fictional Birch laboratory handbook, the Birch laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Birch.",
+        "answer": "The Birch laboratory opens at 12:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6416321955621243,
+        "pks_nats": 0.06330864038318396,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5752855539321899,
+            "15:1": 0.5757339596748352,
+            "15:2": 0.5684024691581726,
+            "15:3": 0.5959035158157349,
+            "26:0": 0.6525555849075317,
+            "26:1": 0.6836909055709839,
+            "26:2": 0.5992881655693054,
+            "26:3": 0.6701145172119141,
+            "28:0": 0.6392331719398499,
+            "28:1": 0.67091304063797,
+            "28:2": 0.5426256060600281,
+            "28:3": 0.7109107971191406,
+            "29:0": 0.7478703856468201,
+            "29:1": 0.7508623003959656,
+            "29:2": 0.6931101083755493,
+            "29:3": 0.5896150469779968
+          },
+          "pks": {
+            "15": 0.028577951714396477,
+            "26": 0.018380915746092796,
+            "28": 0.07368075102567673,
+            "29": 0.13259494304656982
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "cedar",
+        "split": "train",
+        "query": "When does the Cedar laboratory open?",
+        "context": "In the fictional Cedar laboratory handbook, the Cedar laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Cedar.",
+        "answer": "The Cedar laboratory opens at 10:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6586810611188412,
+        "pks_nats": 0.060512442607432604,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.5971598029136658,
+            "15:1": 0.5867066383361816,
+            "15:2": 0.5785874128341675,
+            "15:3": 0.6213879585266113,
+            "26:0": 0.6536178588867188,
+            "26:1": 0.6717451810836792,
+            "26:2": 0.6336156725883484,
+            "26:3": 0.6662024259567261,
+            "28:0": 0.675582766532898,
+            "28:1": 0.7021201848983765,
+            "28:2": 0.6606667041778564,
+            "28:3": 0.7240056991577148,
+            "29:0": 0.7619346380233765,
+            "29:1": 0.7251924276351929,
+            "29:2": 0.6527266502380371,
+            "29:3": 0.627644956111908
+          },
+          "pks": {
+            "15": 0.02875262126326561,
+            "26": 0.01465584896504879,
+            "28": 0.0444878488779068,
+            "29": 0.15415345132350922
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "cedar",
+        "split": "train",
+        "query": "When does the Cedar laboratory open?",
+        "context": "In the fictional Cedar laboratory handbook, the Cedar laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Cedar.",
+        "answer": "The Cedar laboratory opens at 13:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.659693218767643,
+        "pks_nats": 0.05940013052895665,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.5909071564674377,
+            "15:1": 0.6084078550338745,
+            "15:2": 0.5811105966567993,
+            "15:3": 0.6276344656944275,
+            "26:0": 0.6508378982543945,
+            "26:1": 0.6741548776626587,
+            "26:2": 0.6112715005874634,
+            "26:3": 0.6732890009880066,
+            "28:0": 0.6437269449234009,
+            "28:1": 0.7046629786491394,
+            "28:2": 0.6570760607719421,
+            "28:3": 0.7343684434890747,
+            "29:0": 0.7756097316741943,
+            "29:1": 0.736869215965271,
+            "29:2": 0.6670886874198914,
+            "29:3": 0.6180760860443115
+          },
+          "pks": {
+            "15": 0.028566285967826843,
+            "26": 0.015177110210061073,
+            "28": 0.04993324726819992,
+            "29": 0.14392387866973877
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "dahlia",
+        "split": "train",
+        "query": "When does the Dahlia laboratory open?",
+        "context": "In the fictional Dahlia laboratory handbook, the Dahlia laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Dahlia.",
+        "answer": "The Dahlia laboratory opens at 11:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6677101626992226,
+        "pks_nats": 0.0576157309114933,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5665614008903503,
+            "15:1": 0.5857753157615662,
+            "15:2": 0.5849494338035583,
+            "15:3": 0.6301704049110413,
+            "26:0": 0.6535429358482361,
+            "26:1": 0.7036588191986084,
+            "26:2": 0.6200077533721924,
+            "26:3": 0.695200502872467,
+            "28:0": 0.64998459815979,
+            "28:1": 0.7091975808143616,
+            "28:2": 0.6191754937171936,
+            "28:3": 0.7416166663169861,
+            "29:0": 0.7685189247131348,
+            "29:1": 0.7959813475608826,
+            "29:2": 0.7410162091255188,
+            "29:3": 0.6180052161216736
+          },
+          "pks": {
+            "15": 0.03567025065422058,
+            "26": 0.016816645860671997,
+            "28": 0.05476362258195877,
+            "29": 0.12321240454912186
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "dahlia",
+        "split": "train",
+        "query": "When does the Dahlia laboratory open?",
+        "context": "In the fictional Dahlia laboratory handbook, the Dahlia laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Dahlia.",
+        "answer": "The Dahlia laboratory opens at 14:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6715142987668514,
+        "pks_nats": 0.05792571138590574,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5727201700210571,
+            "15:1": 0.59956294298172,
+            "15:2": 0.5906570553779602,
+            "15:3": 0.6376668214797974,
+            "26:0": 0.67103111743927,
+            "26:1": 0.6913787126541138,
+            "26:2": 0.6259590983390808,
+            "26:3": 0.7019810676574707,
+            "28:0": 0.6474933624267578,
+            "28:1": 0.7145065665245056,
+            "28:2": 0.616800844669342,
+            "28:3": 0.7439093589782715,
+            "29:0": 0.772575855255127,
+            "29:1": 0.7999417781829834,
+            "29:2": 0.7433041930198669,
+            "29:3": 0.6147398352622986
+          },
+          "pks": {
+            "15": 0.0336909182369709,
+            "26": 0.01767793297767639,
+            "28": 0.06582681834697723,
+            "29": 0.11450717598199844
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "elm",
+        "split": "train",
+        "query": "When does the Elm laboratory open?",
+        "context": "In the fictional Elm laboratory handbook, the Elm laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Elm.",
+        "answer": "The Elm laboratory opens at 12:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6478462256491184,
+        "pks_nats": 0.054679786786437035,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5786469578742981,
+            "15:1": 0.5897928476333618,
+            "15:2": 0.5828571915626526,
+            "15:3": 0.6113153100013733,
+            "26:0": 0.6630627512931824,
+            "26:1": 0.6938740015029907,
+            "26:2": 0.5957388877868652,
+            "26:3": 0.6816232204437256,
+            "28:0": 0.5155061483383179,
+            "28:1": 0.6674890518188477,
+            "28:2": 0.6455565690994263,
+            "28:3": 0.6916823983192444,
+            "29:0": 0.7635087370872498,
+            "29:1": 0.766960620880127,
+            "29:2": 0.7171369194984436,
+            "29:3": 0.6007879972457886
+          },
+          "pks": {
+            "15": 0.0287014227360487,
+            "26": 0.01786862500011921,
+            "28": 0.045597366988658905,
+            "29": 0.12655173242092133
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "elm",
+        "split": "train",
+        "query": "When does the Elm laboratory open?",
+        "context": "In the fictional Elm laboratory handbook, the Elm laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Elm.",
+        "answer": "The Elm laboratory opens at 15:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6535691097378731,
+        "pks_nats": 0.05366472899913788,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5842476487159729,
+            "15:1": 0.5994526147842407,
+            "15:2": 0.5923893451690674,
+            "15:3": 0.6182271242141724,
+            "26:0": 0.6576007008552551,
+            "26:1": 0.6988348960876465,
+            "26:2": 0.6074314713478088,
+            "26:3": 0.6923925876617432,
+            "28:0": 0.5130316615104675,
+            "28:1": 0.6788427233695984,
+            "28:2": 0.6504793167114258,
+            "28:3": 0.6966848373413086,
+            "29:0": 0.7667797207832336,
+            "29:1": 0.771954357624054,
+            "29:2": 0.7221459746360779,
+            "29:3": 0.6066107749938965
+          },
+          "pks": {
+            "15": 0.026462996378540993,
+            "26": 0.01834939606487751,
+            "28": 0.04997294768691063,
+            "29": 0.11987357586622238
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "fir",
+        "split": "train",
+        "query": "When does the Fir laboratory open?",
+        "context": "In the fictional Fir laboratory handbook, the Fir laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Fir.",
+        "answer": "The Fir laboratory opens at 13:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6736370995640755,
+        "pks_nats": 0.06210990040563047,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.5996729731559753,
+            "15:1": 0.6211005449295044,
+            "15:2": 0.5905848741531372,
+            "15:3": 0.6304909586906433,
+            "26:0": 0.681999146938324,
+            "26:1": 0.7185043692588806,
+            "26:2": 0.6442091464996338,
+            "26:3": 0.6907327175140381,
+            "28:0": 0.6328163146972656,
+            "28:1": 0.6982872486114502,
+            "28:2": 0.5733938217163086,
+            "28:3": 0.7370247840881348,
+            "29:0": 0.7986096739768982,
+            "29:1": 0.7697389721870422,
+            "29:2": 0.7592412829399109,
+            "29:3": 0.6317867636680603
+          },
+          "pks": {
+            "15": 0.03304840996861458,
+            "26": 0.015606417320668697,
+            "28": 0.0444854237139225,
+            "29": 0.1552993506193161
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "fir",
+        "split": "train",
+        "query": "When does the Fir laboratory open?",
+        "context": "In the fictional Fir laboratory handbook, the Fir laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Fir.",
+        "answer": "The Fir laboratory opens at 08:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6794090084731579,
+        "pks_nats": 0.06604343838989735,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.6308029294013977,
+            "15:1": 0.6353133320808411,
+            "15:2": 0.5956391096115112,
+            "15:3": 0.6363367438316345,
+            "26:0": 0.6863182187080383,
+            "26:1": 0.7167426943778992,
+            "26:2": 0.6357683539390564,
+            "26:3": 0.695194661617279,
+            "28:0": 0.6338143348693848,
+            "28:1": 0.6882663369178772,
+            "28:2": 0.5783528685569763,
+            "28:3": 0.73593670129776,
+            "29:0": 0.8130584955215454,
+            "29:1": 0.7764163613319397,
+            "29:2": 0.7733004689216614,
+            "29:3": 0.6392825245857239
+          },
+          "pks": {
+            "15": 0.03386051580309868,
+            "26": 0.021689020097255707,
+            "28": 0.053495366126298904,
+            "29": 0.1551288515329361
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "grove",
+        "split": "train",
+        "query": "When does the Grove laboratory open?",
+        "context": "In the fictional Grove laboratory handbook, the Grove laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Grove.",
+        "answer": "The Grove laboratory opens at 14:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.667847067117691,
+        "pks_nats": 0.05788479279726744,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.588092029094696,
+            "15:1": 0.5969979763031006,
+            "15:2": 0.5663527250289917,
+            "15:3": 0.632023811340332,
+            "26:0": 0.6642293930053711,
+            "26:1": 0.6901917457580566,
+            "26:2": 0.6323760747909546,
+            "26:3": 0.692500114440918,
+            "28:0": 0.7048443555831909,
+            "28:1": 0.7025661468505859,
+            "28:2": 0.6570800542831421,
+            "28:3": 0.727904200553894,
+            "29:0": 0.7688056230545044,
+            "29:1": 0.7093049883842468,
+            "29:2": 0.7148227095603943,
+            "29:3": 0.6374611258506775
+          },
+          "pks": {
+            "15": 0.028927898034453392,
+            "26": 0.01306363008916378,
+            "28": 0.04810047149658203,
+            "29": 0.14144717156887054
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "grove",
+        "split": "train",
+        "query": "When does the Grove laboratory open?",
+        "context": "In the fictional Grove laboratory handbook, the Grove laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Grove.",
+        "answer": "The Grove laboratory opens at 09:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6746435649693012,
+        "pks_nats": 0.06015237374231219,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.610235869884491,
+            "15:1": 0.6115446090698242,
+            "15:2": 0.5907680988311768,
+            "15:3": 0.644012451171875,
+            "26:0": 0.6640918254852295,
+            "26:1": 0.7081128358840942,
+            "26:2": 0.6294262409210205,
+            "26:3": 0.6937991976737976,
+            "28:0": 0.6870533227920532,
+            "28:1": 0.6937744617462158,
+            "28:2": 0.6619298458099365,
+            "28:3": 0.750316321849823,
+            "29:0": 0.783021867275238,
+            "29:1": 0.7204341292381287,
+            "29:2": 0.719847559928894,
+            "29:3": 0.6259284019470215
+          },
+          "pks": {
+            "15": 0.02798587456345558,
+            "26": 0.01767757348716259,
+            "28": 0.05602289363741875,
+            "29": 0.13892315328121185
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "hazel",
+        "split": "train",
+        "query": "When does the Hazel laboratory open?",
+        "context": "In the fictional Hazel laboratory handbook, the Hazel laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Hazel.",
+        "answer": "The Hazel laboratory opens at 15:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6609948389232159,
+        "pks_nats": 0.057636847952380776,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5670208930969238,
+            "15:1": 0.5926415920257568,
+            "15:2": 0.5879305601119995,
+            "15:3": 0.5819868445396423,
+            "26:0": 0.6460652947425842,
+            "26:1": 0.6885504722595215,
+            "26:2": 0.6133931279182434,
+            "26:3": 0.6850948333740234,
+            "28:0": 0.604087769985199,
+            "28:1": 0.6977200508117676,
+            "28:2": 0.6370024085044861,
+            "28:3": 0.729101300239563,
+            "29:0": 0.7806446552276611,
+            "29:1": 0.7777151465415955,
+            "29:2": 0.7712691426277161,
+            "29:3": 0.6156933307647705
+          },
+          "pks": {
+            "15": 0.02759641595184803,
+            "26": 0.014423265121877193,
+            "28": 0.057524360716342926,
+            "29": 0.13100335001945496
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "hazel",
+        "split": "train",
+        "query": "When does the Hazel laboratory open?",
+        "context": "In the fictional Hazel laboratory handbook, the Hazel laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Hazel.",
+        "answer": "The Hazel laboratory opens at 10:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6689738780260086,
+        "pks_nats": 0.06105225160717964,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5932298898696899,
+            "15:1": 0.5942909121513367,
+            "15:2": 0.5873605608940125,
+            "15:3": 0.5722365975379944,
+            "26:0": 0.6456564664840698,
+            "26:1": 0.6964717507362366,
+            "26:2": 0.6117786765098572,
+            "26:3": 0.6883338093757629,
+            "28:0": 0.6142226457595825,
+            "28:1": 0.7093517780303955,
+            "28:2": 0.632082462310791,
+            "28:3": 0.7404967546463013,
+            "29:0": 0.7956045866012573,
+            "29:1": 0.8007978796958923,
+            "29:2": 0.7810341119766235,
+            "29:3": 0.6406331658363342
+          },
+          "pks": {
+            "15": 0.022555995732545853,
+            "26": 0.01621643826365471,
+            "28": 0.06427179276943207,
+            "29": 0.14116477966308594
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "iris",
+        "split": "train",
+        "query": "When does the Iris laboratory open?",
+        "context": "In the fictional Iris laboratory handbook, the Iris laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Iris.",
+        "answer": "The Iris laboratory opens at 08:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6905319057404995,
+        "pks_nats": 0.05498318653553724,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6195245981216431,
+            "15:1": 0.6178432703018188,
+            "15:2": 0.6263536214828491,
+            "15:3": 0.671160101890564,
+            "26:0": 0.7346660494804382,
+            "26:1": 0.7237991094589233,
+            "26:2": 0.6491645574569702,
+            "26:3": 0.704923152923584,
+            "28:0": 0.6774253845214844,
+            "28:1": 0.7293345332145691,
+            "28:2": 0.6909715533256531,
+            "28:3": 0.7333099842071533,
+            "29:0": 0.7904488444328308,
+            "29:1": 0.7308474779129028,
+            "29:2": 0.718113124370575,
+            "29:3": 0.6306251287460327
+          },
+          "pks": {
+            "15": 0.03077482432126999,
+            "26": 0.01585926115512848,
+            "28": 0.0414106585085392,
+            "29": 0.1318880021572113
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "iris",
+        "split": "train",
+        "query": "When does the Iris laboratory open?",
+        "context": "In the fictional Iris laboratory handbook, the Iris laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Iris.",
+        "answer": "The Iris laboratory opens at 11:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6905473694205284,
+        "pks_nats": 0.060593849048018456,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6161397695541382,
+            "15:1": 0.6288204193115234,
+            "15:2": 0.6121699213981628,
+            "15:3": 0.6582081317901611,
+            "26:0": 0.7371276617050171,
+            "26:1": 0.6932579874992371,
+            "26:2": 0.6463702321052551,
+            "26:3": 0.708734393119812,
+            "28:0": 0.6903437376022339,
+            "28:1": 0.731634259223938,
+            "28:2": 0.6903384923934937,
+            "28:3": 0.7383718490600586,
+            "29:0": 0.7935512065887451,
+            "29:1": 0.7555379867553711,
+            "29:2": 0.7219340801239014,
+            "29:3": 0.626217782497406
+          },
+          "pks": {
+            "15": 0.031491633504629135,
+            "26": 0.016942914575338364,
+            "28": 0.04763936996459961,
+            "29": 0.1463014781475067
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "juniper",
+        "split": "train",
+        "query": "When does the Juniper laboratory open?",
+        "context": "In the fictional Juniper laboratory handbook, the Juniper laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Juniper.",
+        "answer": "The Juniper laboratory opens at 09:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6533113941550255,
+        "pks_nats": 0.0625254837796092,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5916150212287903,
+            "15:1": 0.6049380302429199,
+            "15:2": 0.5981878638267517,
+            "15:3": 0.6228338479995728,
+            "26:0": 0.6627815365791321,
+            "26:1": 0.701093852519989,
+            "26:2": 0.6100656390190125,
+            "26:3": 0.6782553195953369,
+            "28:0": 0.6272200345993042,
+            "28:1": 0.6881166696548462,
+            "28:2": 0.5465331077575684,
+            "28:3": 0.7097434997558594,
+            "29:0": 0.7343162894248962,
+            "29:1": 0.7715725898742676,
+            "29:2": 0.6935626268386841,
+            "29:3": 0.6121463775634766
+          },
+          "pks": {
+            "15": 0.0305589959025383,
+            "26": 0.014338243752717972,
+            "28": 0.07030938565731049,
+            "29": 0.13489530980587006
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "juniper",
+        "split": "train",
+        "query": "When does the Juniper laboratory open?",
+        "context": "In the fictional Juniper laboratory handbook, the Juniper laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Juniper.",
+        "answer": "The Juniper laboratory opens at 12:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6529901325702667,
+        "pks_nats": 0.06804778473451734,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 44,
+        "components": {
+          "ecs": {
+            "15:0": 0.5890089869499207,
+            "15:1": 0.6074491739273071,
+            "15:2": 0.583090603351593,
+            "15:3": 0.6083275079727173,
+            "26:0": 0.6745405197143555,
+            "26:1": 0.6927609443664551,
+            "26:2": 0.6013999581336975,
+            "26:3": 0.6767559051513672,
+            "28:0": 0.6405917406082153,
+            "28:1": 0.6967122554779053,
+            "28:2": 0.5508760213851929,
+            "28:3": 0.7119616270065308,
+            "29:0": 0.7504839301109314,
+            "29:1": 0.7847018837928772,
+            "29:2": 0.6906038522720337,
+            "29:3": 0.5885772109031677
+          },
+          "pks": {
+            "15": 0.029770320281386375,
+            "26": 0.01690967008471489,
+            "28": 0.07885320484638214,
+            "29": 0.14665794372558594
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "kestrel",
+        "split": "train",
+        "query": "When does the Kestrel laboratory open?",
+        "context": "In the fictional Kestrel laboratory handbook, the Kestrel laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Kestrel.",
+        "answer": "The Kestrel laboratory opens at 10:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6562533378601074,
+        "pks_nats": 0.06698398874141276,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 47,
+        "components": {
+          "ecs": {
+            "15:0": 0.5765408277511597,
+            "15:1": 0.5688012838363647,
+            "15:2": 0.5436789989471436,
+            "15:3": 0.6174858808517456,
+            "26:0": 0.6823775768280029,
+            "26:1": 0.7004762887954712,
+            "26:2": 0.594869077205658,
+            "26:3": 0.6829469203948975,
+            "28:0": 0.680413544178009,
+            "28:1": 0.6892368197441101,
+            "28:2": 0.5821396112442017,
+            "28:3": 0.7203475832939148,
+            "29:0": 0.7566481828689575,
+            "29:1": 0.786629319190979,
+            "29:2": 0.7514369487762451,
+            "29:3": 0.5660245418548584
+          },
+          "pks": {
+            "15": 0.033524926751852036,
+            "26": 0.015157883055508137,
+            "28": 0.09347490221261978,
+            "29": 0.12577824294567108
+          }
+        },
+        "response_tokens": 14,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "kestrel",
+        "split": "train",
+        "query": "When does the Kestrel laboratory open?",
+        "context": "In the fictional Kestrel laboratory handbook, the Kestrel laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Kestrel.",
+        "answer": "The Kestrel laboratory opens at 13:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6599063090980053,
+        "pks_nats": 0.06616173963993788,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 47,
+        "components": {
+          "ecs": {
+            "15:0": 0.5883986949920654,
+            "15:1": 0.5784052610397339,
+            "15:2": 0.5467053055763245,
+            "15:3": 0.6231024265289307,
+            "26:0": 0.6821834444999695,
+            "26:1": 0.6971697211265564,
+            "26:2": 0.5981833338737488,
+            "26:3": 0.684573233127594,
+            "28:0": 0.6712623834609985,
+            "28:1": 0.6959508061408997,
+            "28:2": 0.5846880674362183,
+            "28:3": 0.7245451211929321,
+            "29:0": 0.7653029561042786,
+            "29:1": 0.7946729063987732,
+            "29:2": 0.7611311078071594,
+            "29:3": 0.5622261762619019
+          },
+          "pks": {
+            "15": 0.03248529136180878,
+            "26": 0.01577587053179741,
+            "28": 0.09931362420320511,
+            "29": 0.11707217246294022
+          }
+        },
+        "response_tokens": 14,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "larch",
+        "split": "train",
+        "query": "When does the Larch laboratory open?",
+        "context": "In the fictional Larch laboratory handbook, the Larch laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Larch.",
+        "answer": "The Larch laboratory opens at 11:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6517188996076584,
+        "pks_nats": 0.06169098522514105,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.584544837474823,
+            "15:1": 0.5905375480651855,
+            "15:2": 0.5782066583633423,
+            "15:3": 0.613521933555603,
+            "26:0": 0.6506504416465759,
+            "26:1": 0.6912906169891357,
+            "26:2": 0.5943779945373535,
+            "26:3": 0.6697329878807068,
+            "28:0": 0.6335211992263794,
+            "28:1": 0.6898649334907532,
+            "28:2": 0.5603827238082886,
+            "28:3": 0.6947655081748962,
+            "29:0": 0.777948260307312,
+            "29:1": 0.780500054359436,
+            "29:2": 0.7219392657279968,
+            "29:3": 0.5957174301147461
+          },
+          "pks": {
+            "15": 0.03481243923306465,
+            "26": 0.014606840908527374,
+            "28": 0.06551302969455719,
+            "29": 0.13183163106441498
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "larch",
+        "split": "train",
+        "query": "When does the Larch laboratory open?",
+        "context": "In the fictional Larch laboratory handbook, the Larch laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Larch.",
+        "answer": "The Larch laboratory opens at 14:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6554177589714527,
+        "pks_nats": 0.06211389368399978,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5892192721366882,
+            "15:1": 0.5978624224662781,
+            "15:2": 0.5829616785049438,
+            "15:3": 0.6161904335021973,
+            "26:0": 0.6563634276390076,
+            "26:1": 0.6838976144790649,
+            "26:2": 0.5965909957885742,
+            "26:3": 0.6772746443748474,
+            "28:0": 0.6348381042480469,
+            "28:1": 0.6946963667869568,
+            "28:2": 0.5560744404792786,
+            "28:3": 0.6972352862358093,
+            "29:0": 0.7868537902832031,
+            "29:1": 0.7894922494888306,
+            "29:2": 0.7289342284202576,
+            "29:3": 0.598199188709259
+          },
+          "pks": {
+            "15": 0.032553017139434814,
+            "26": 0.015348611399531364,
+            "28": 0.07632189989089966,
+            "29": 0.12423204630613327
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "maple",
+        "split": "train",
+        "query": "When does the Maple laboratory open?",
+        "context": "In the fictional Maple laboratory handbook, the Maple laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Maple.",
+        "answer": "The Maple laboratory opens at 12:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6699437126517296,
+        "pks_nats": 0.05954984948039055,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.6048984527587891,
+            "15:1": 0.6029365062713623,
+            "15:2": 0.5731821060180664,
+            "15:3": 0.6267484426498413,
+            "26:0": 0.6529852747917175,
+            "26:1": 0.6864051818847656,
+            "26:2": 0.6241686344146729,
+            "26:3": 0.7125563621520996,
+            "28:0": 0.6729203462600708,
+            "28:1": 0.6825942993164062,
+            "28:2": 0.6861929297447205,
+            "28:3": 0.737891435623169,
+            "29:0": 0.780664324760437,
+            "29:1": 0.7463399767875671,
+            "29:2": 0.6826269030570984,
+            "29:3": 0.6459882259368896
+          },
+          "pks": {
+            "15": 0.028991755098104477,
+            "26": 0.014398220926523209,
+            "28": 0.04250328242778778,
+            "29": 0.15230613946914673
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "maple",
+        "split": "train",
+        "query": "When does the Maple laboratory open?",
+        "context": "In the fictional Maple laboratory handbook, the Maple laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Maple.",
+        "answer": "The Maple laboratory opens at 15:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6741170547902584,
+        "pks_nats": 0.0588206872344017,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.6071996688842773,
+            "15:1": 0.613357663154602,
+            "15:2": 0.587763786315918,
+            "15:3": 0.6402533054351807,
+            "26:0": 0.6328327655792236,
+            "26:1": 0.6846680641174316,
+            "26:2": 0.6311427354812622,
+            "26:3": 0.7244741320610046,
+            "28:0": 0.6660844683647156,
+            "28:1": 0.68206787109375,
+            "28:2": 0.6891999244689941,
+            "28:3": 0.7385501861572266,
+            "29:0": 0.7937843799591064,
+            "29:1": 0.740472674369812,
+            "29:2": 0.6915431022644043,
+            "29:3": 0.6624781489372253
+          },
+          "pks": {
+            "15": 0.028640329837799072,
+            "26": 0.014626894146203995,
+            "28": 0.046447720378637314,
+            "29": 0.14556780457496643
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "nectar",
+        "split": "train",
+        "query": "When does the Nectar laboratory open?",
+        "context": "In the fictional Nectar laboratory handbook, the Nectar laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Nectar.",
+        "answer": "The Nectar laboratory opens at 13:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6544203497469425,
+        "pks_nats": 0.06682360055856407,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5733186602592468,
+            "15:1": 0.576498806476593,
+            "15:2": 0.5685482025146484,
+            "15:3": 0.6006922125816345,
+            "26:0": 0.6570996046066284,
+            "26:1": 0.6935945153236389,
+            "26:2": 0.6138965487480164,
+            "26:3": 0.6751141548156738,
+            "28:0": 0.6565184593200684,
+            "28:1": 0.6877186298370361,
+            "28:2": 0.5930542945861816,
+            "28:3": 0.7030960321426392,
+            "29:0": 0.7530595660209656,
+            "29:1": 0.7697972655296326,
+            "29:2": 0.7307338714599609,
+            "29:3": 0.6179847717285156
+          },
+          "pks": {
+            "15": 0.029497696086764336,
+            "26": 0.013327487744390965,
+            "28": 0.05032802000641823,
+            "29": 0.17414119839668274
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "nectar",
+        "split": "train",
+        "query": "When does the Nectar laboratory open?",
+        "context": "In the fictional Nectar laboratory handbook, the Nectar laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Nectar.",
+        "answer": "The Nectar laboratory opens at 08:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6609227918088436,
+        "pks_nats": 0.07135852472856641,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.605180561542511,
+            "15:1": 0.596798837184906,
+            "15:2": 0.5707844495773315,
+            "15:3": 0.6102021336555481,
+            "26:0": 0.6550421118736267,
+            "26:1": 0.6854959726333618,
+            "26:2": 0.6010192036628723,
+            "26:3": 0.6771118640899658,
+            "28:0": 0.6521919369697571,
+            "28:1": 0.6884052157402039,
+            "28:2": 0.5923582911491394,
+            "28:3": 0.7134203314781189,
+            "29:0": 0.7687098979949951,
+            "29:1": 0.7771741151809692,
+            "29:2": 0.7508134841918945,
+            "29:3": 0.6300562620162964
+          },
+          "pks": {
+            "15": 0.029841559007763863,
+            "26": 0.019834328442811966,
+            "28": 0.06134678050875664,
+            "29": 0.17441143095493317
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "olive",
+        "split": "train",
+        "query": "When does the Olive laboratory open?",
+        "context": "In the fictional Olive laboratory handbook, the Olive laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Olive.",
+        "answer": "The Olive laboratory opens at 14:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6806997694075108,
+        "pks_nats": 0.058144569862633944,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.5972864627838135,
+            "15:1": 0.6058411002159119,
+            "15:2": 0.5762076377868652,
+            "15:3": 0.6205276250839233,
+            "26:0": 0.6990270614624023,
+            "26:1": 0.6985359191894531,
+            "26:2": 0.6376269459724426,
+            "26:3": 0.7046042680740356,
+            "28:0": 0.6428503394126892,
+            "28:1": 0.7256054878234863,
+            "28:2": 0.7106069326400757,
+            "28:3": 0.7239989638328552,
+            "29:0": 0.8204819560050964,
+            "29:1": 0.7471596002578735,
+            "29:2": 0.7296408414840698,
+            "29:3": 0.6511951684951782
+          },
+          "pks": {
+            "15": 0.028143182396888733,
+            "26": 0.012873833999037743,
+            "28": 0.045935969799757004,
+            "29": 0.1456252932548523
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "olive",
+        "split": "train",
+        "query": "When does the Olive laboratory open?",
+        "context": "In the fictional Olive laboratory handbook, the Olive laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Olive.",
+        "answer": "The Olive laboratory opens at 09:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6853924132883549,
+        "pks_nats": 0.06059015169739723,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.6176304221153259,
+            "15:1": 0.6292001008987427,
+            "15:2": 0.6021813154220581,
+            "15:3": 0.6373209953308105,
+            "26:0": 0.6969537734985352,
+            "26:1": 0.6937888860702515,
+            "26:2": 0.6259968280792236,
+            "26:3": 0.7022571563720703,
+            "28:0": 0.6489867568016052,
+            "28:1": 0.710615336894989,
+            "28:2": 0.7146848440170288,
+            "28:3": 0.7328027486801147,
+            "29:0": 0.8188526034355164,
+            "29:1": 0.7631415724754333,
+            "29:2": 0.7253642082214355,
+            "29:3": 0.6465010643005371
+          },
+          "pks": {
+            "15": 0.02709363028407097,
+            "26": 0.017983518540859222,
+            "28": 0.053084056824445724,
+            "29": 0.144199401140213
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "pine",
+        "split": "train",
+        "query": "When does the Pine laboratory open?",
+        "context": "In the fictional Pine laboratory handbook, the Pine laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Pine.",
+        "answer": "The Pine laboratory opens at 15:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6636997610330582,
+        "pks_nats": 0.05617210362106562,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.5952154994010925,
+            "15:1": 0.5946031808853149,
+            "15:2": 0.5572822093963623,
+            "15:3": 0.6174445152282715,
+            "26:0": 0.6522490382194519,
+            "26:1": 0.6755236983299255,
+            "26:2": 0.6046748161315918,
+            "26:3": 0.6959222555160522,
+            "28:0": 0.6516152024269104,
+            "28:1": 0.7159098386764526,
+            "28:2": 0.6878061294555664,
+            "28:3": 0.7182633876800537,
+            "29:0": 0.7776409983634949,
+            "29:1": 0.7464392185211182,
+            "29:2": 0.6979554891586304,
+            "29:3": 0.6306506991386414
+          },
+          "pks": {
+            "15": 0.03086247108876705,
+            "26": 0.012566639110445976,
+            "28": 0.04545021057128906,
+            "29": 0.13580909371376038
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "pine",
+        "split": "train",
+        "query": "When does the Pine laboratory open?",
+        "context": "In the fictional Pine laboratory handbook, the Pine laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Pine.",
+        "answer": "The Pine laboratory opens at 10:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6725705824792385,
+        "pks_nats": 0.060167599469423294,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.619981050491333,
+            "15:1": 0.6018109917640686,
+            "15:2": 0.5700833797454834,
+            "15:3": 0.6161282658576965,
+            "26:0": 0.6570430397987366,
+            "26:1": 0.6942306756973267,
+            "26:2": 0.6215943098068237,
+            "26:3": 0.6979737281799316,
+            "28:0": 0.655592679977417,
+            "28:1": 0.7061678767204285,
+            "28:2": 0.6953650712966919,
+            "28:3": 0.728991687297821,
+            "29:0": 0.790553092956543,
+            "29:1": 0.7584282755851746,
+            "29:2": 0.7137678861618042,
+            "29:3": 0.6334173083305359
+          },
+          "pks": {
+            "15": 0.025631457567214966,
+            "26": 0.013848237693309784,
+            "28": 0.05194681137800217,
+            "29": 0.14924389123916626
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "quartz",
+        "split": "validation",
+        "query": "When does the Quartz laboratory open?",
+        "context": "In the fictional Quartz laboratory handbook, the Quartz laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Quartz.",
+        "answer": "The Quartz laboratory opens at 08:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.651062548160553,
+        "pks_nats": 0.0664642727933824,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5737000703811646,
+            "15:1": 0.5879770517349243,
+            "15:2": 0.5728812217712402,
+            "15:3": 0.6202415823936462,
+            "26:0": 0.6457512974739075,
+            "26:1": 0.7013370990753174,
+            "26:2": 0.6408019661903381,
+            "26:3": 0.6801965236663818,
+            "28:0": 0.6501699686050415,
+            "28:1": 0.6735165119171143,
+            "28:2": 0.5225944519042969,
+            "28:3": 0.7021989226341248,
+            "29:0": 0.7638211250305176,
+            "29:1": 0.7730556130409241,
+            "29:2": 0.7212784290313721,
+            "29:3": 0.5874789357185364
+          },
+          "pks": {
+            "15": 0.027930818498134613,
+            "26": 0.018969068303704262,
+            "28": 0.0598071850836277,
+            "29": 0.15915001928806305
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "quartz",
+        "split": "validation",
+        "query": "When does the Quartz laboratory open?",
+        "context": "In the fictional Quartz laboratory handbook, the Quartz laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Quartz.",
+        "answer": "The Quartz laboratory opens at 11:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6557366475462914,
+        "pks_nats": 0.07159627648070455,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5722910761833191,
+            "15:1": 0.598711371421814,
+            "15:2": 0.5617166757583618,
+            "15:3": 0.6163163185119629,
+            "26:0": 0.6537808775901794,
+            "26:1": 0.6880984902381897,
+            "26:2": 0.6507860422134399,
+            "26:3": 0.6826319098472595,
+            "28:0": 0.6637496948242188,
+            "28:1": 0.6809590458869934,
+            "28:2": 0.5250946283340454,
+            "28:3": 0.70174640417099,
+            "29:0": 0.7747222185134888,
+            "29:1": 0.7861099243164062,
+            "29:2": 0.7477090358734131,
+            "29:3": 0.5873626470565796
+          },
+          "pks": {
+            "15": 0.030085600912570953,
+            "26": 0.019752638414502144,
+            "28": 0.06348120421171188,
+            "29": 0.1730656623840332
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "reed",
+        "split": "validation",
+        "query": "When does the Reed laboratory open?",
+        "context": "In the fictional Reed laboratory handbook, the Reed laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Reed.",
+        "answer": "The Reed laboratory opens at 09:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6806769967079163,
+        "pks_nats": 0.05243053613230586,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6087601780891418,
+            "15:1": 0.6151633262634277,
+            "15:2": 0.5985594391822815,
+            "15:3": 0.6414661407470703,
+            "26:0": 0.7153345942497253,
+            "26:1": 0.7050415873527527,
+            "26:2": 0.6768712997436523,
+            "26:3": 0.6919769048690796,
+            "28:0": 0.6766969561576843,
+            "28:1": 0.7026553153991699,
+            "28:2": 0.677183985710144,
+            "28:3": 0.7194034457206726,
+            "29:0": 0.7742108106613159,
+            "29:1": 0.7279437780380249,
+            "29:2": 0.7300050258636475,
+            "29:3": 0.6295591592788696
+          },
+          "pks": {
+            "15": 0.02308492921292782,
+            "26": 0.017482098191976547,
+            "28": 0.042428623884916306,
+            "29": 0.12672649323940277
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "reed",
+        "split": "validation",
+        "query": "When does the Reed laboratory open?",
+        "context": "In the fictional Reed laboratory handbook, the Reed laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Reed.",
+        "answer": "The Reed laboratory opens at 12:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6811549365520477,
+        "pks_nats": 0.058116082567721605,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6184015274047852,
+            "15:1": 0.6173742413520813,
+            "15:2": 0.5914037227630615,
+            "15:3": 0.6410573720932007,
+            "26:0": 0.724057674407959,
+            "26:1": 0.69305819272995,
+            "26:2": 0.6498438119888306,
+            "26:3": 0.7017186880111694,
+            "28:0": 0.6828263998031616,
+            "28:1": 0.6920431852340698,
+            "28:2": 0.6770745515823364,
+            "28:3": 0.7296515703201294,
+            "29:0": 0.7913591265678406,
+            "29:1": 0.746933102607727,
+            "29:2": 0.721061110496521,
+            "29:3": 0.6206147074699402
+          },
+          "pks": {
+            "15": 0.024730032309889793,
+            "26": 0.01947971060872078,
+            "28": 0.05089660733938217,
+            "29": 0.13735798001289368
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "spruce",
+        "split": "validation",
+        "query": "When does the Spruce laboratory open?",
+        "context": "In the fictional Spruce laboratory handbook, the Spruce laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Spruce.",
+        "answer": "The Spruce laboratory opens at 10:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6462240815162659,
+        "pks_nats": 0.06920066475868225,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5835549235343933,
+            "15:1": 0.5847607851028442,
+            "15:2": 0.5834712386131287,
+            "15:3": 0.6145310401916504,
+            "26:0": 0.6438282132148743,
+            "26:1": 0.6853268146514893,
+            "26:2": 0.5976122617721558,
+            "26:3": 0.6692862510681152,
+            "28:0": 0.6551036834716797,
+            "28:1": 0.6703887581825256,
+            "28:2": 0.5233283638954163,
+            "28:3": 0.6962961554527283,
+            "29:0": 0.7493204474449158,
+            "29:1": 0.7744264006614685,
+            "29:2": 0.6950654983520508,
+            "29:3": 0.6132844686508179
+          },
+          "pks": {
+            "15": 0.03188600391149521,
+            "26": 0.019658148288726807,
+            "28": 0.07550167292356491,
+            "29": 0.14975683391094208
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "spruce",
+        "split": "validation",
+        "query": "When does the Spruce laboratory open?",
+        "context": "In the fictional Spruce laboratory handbook, the Spruce laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Spruce.",
+        "answer": "The Spruce laboratory opens at 13:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6462002322077751,
+        "pks_nats": 0.06840311829000711,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.576958417892456,
+            "15:1": 0.5932844877243042,
+            "15:2": 0.5797448754310608,
+            "15:3": 0.6160458922386169,
+            "26:0": 0.6464870572090149,
+            "26:1": 0.6789678931236267,
+            "26:2": 0.5870264172554016,
+            "26:3": 0.6734732985496521,
+            "28:0": 0.6548355221748352,
+            "28:1": 0.6746334433555603,
+            "28:2": 0.5121352076530457,
+            "28:3": 0.7058874368667603,
+            "29:0": 0.756511926651001,
+            "29:1": 0.7816944122314453,
+            "29:2": 0.7028903365135193,
+            "29:3": 0.5986270904541016
+          },
+          "pks": {
+            "15": 0.030901340767741203,
+            "26": 0.02046334557235241,
+            "28": 0.0812535211443901,
+            "29": 0.14099426567554474
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "thistle",
+        "split": "validation",
+        "query": "When does the Thistle laboratory open?",
+        "context": "In the fictional Thistle laboratory handbook, the Thistle laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Thistle.",
+        "answer": "The Thistle laboratory opens at 11:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6353280618786812,
+        "pks_nats": 0.07410454656928778,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5544860363006592,
+            "15:1": 0.5716477632522583,
+            "15:2": 0.5678408145904541,
+            "15:3": 0.5892870426177979,
+            "26:0": 0.6291385293006897,
+            "26:1": 0.6561515927314758,
+            "26:2": 0.5770422220230103,
+            "26:3": 0.6615762114524841,
+            "28:0": 0.6473209857940674,
+            "28:1": 0.6745213866233826,
+            "28:2": 0.5348774194717407,
+            "28:3": 0.6949721574783325,
+            "29:0": 0.7423909306526184,
+            "29:1": 0.78534334897995,
+            "29:2": 0.6884627938270569,
+            "29:3": 0.5901897549629211
+          },
+          "pks": {
+            "15": 0.03282180428504944,
+            "26": 0.016336504369974136,
+            "28": 0.07400240749120712,
+            "29": 0.1732574701309204
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "thistle",
+        "split": "validation",
+        "query": "When does the Thistle laboratory open?",
+        "context": "In the fictional Thistle laboratory handbook, the Thistle laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Thistle.",
+        "answer": "The Thistle laboratory opens at 14:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6393080428242683,
+        "pks_nats": 0.07443691650405526,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5622880458831787,
+            "15:1": 0.5801883339881897,
+            "15:2": 0.57389897108078,
+            "15:3": 0.6042283177375793,
+            "26:0": 0.6397884488105774,
+            "26:1": 0.6466384530067444,
+            "26:2": 0.5819188356399536,
+            "26:3": 0.6695120334625244,
+            "28:0": 0.639040470123291,
+            "28:1": 0.6798908114433289,
+            "28:2": 0.533085286617279,
+            "28:3": 0.7022404670715332,
+            "29:0": 0.7459775805473328,
+            "29:1": 0.789969265460968,
+            "29:2": 0.6901755928993225,
+            "29:3": 0.5900877714157104
+          },
+          "pks": {
+            "15": 0.030314253643155098,
+            "26": 0.017147868871688843,
+            "28": 0.08587782829999924,
+            "29": 0.16440771520137787
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "umber",
+        "split": "validation",
+        "query": "When does the Umber laboratory open?",
+        "context": "In the fictional Umber laboratory handbook, the Umber laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Umber.",
+        "answer": "The Umber laboratory opens at 12:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6579374112188816,
+        "pks_nats": 0.0694688456133008,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.5882472991943359,
+            "15:1": 0.5913500785827637,
+            "15:2": 0.5817162394523621,
+            "15:3": 0.591271698474884,
+            "26:0": 0.6597474217414856,
+            "26:1": 0.7074576616287231,
+            "26:2": 0.6125282049179077,
+            "26:3": 0.671509861946106,
+            "28:0": 0.5994523167610168,
+            "28:1": 0.685958743095398,
+            "28:2": 0.6525952219963074,
+            "28:3": 0.6955943703651428,
+            "29:0": 0.7648434638977051,
+            "29:1": 0.7822684049606323,
+            "29:2": 0.7352773547172546,
+            "29:3": 0.6071802377700806
+          },
+          "pks": {
+            "15": 0.03518996015191078,
+            "26": 0.019099533557891846,
+            "28": 0.04334576427936554,
+            "29": 0.18024012446403503
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "umber",
+        "split": "validation",
+        "query": "When does the Umber laboratory open?",
+        "context": "In the fictional Umber laboratory handbook, the Umber laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Umber.",
+        "answer": "The Umber laboratory opens at 15:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6627922132611275,
+        "pks_nats": 0.068408137653023,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.5897790789604187,
+            "15:1": 0.60101318359375,
+            "15:2": 0.5887517333030701,
+            "15:3": 0.6022632718086243,
+            "26:0": 0.6609636545181274,
+            "26:1": 0.7034175992012024,
+            "26:2": 0.6263958811759949,
+            "26:3": 0.6797106266021729,
+            "28:0": 0.595247209072113,
+            "28:1": 0.6878958940505981,
+            "28:2": 0.6547099351882935,
+            "28:3": 0.6997475624084473,
+            "29:0": 0.7673256397247314,
+            "29:1": 0.7884666919708252,
+            "29:2": 0.7464880347251892,
+            "29:3": 0.6124994158744812
+          },
+          "pks": {
+            "15": 0.033277157694101334,
+            "26": 0.018854627385735512,
+            "28": 0.046547915786504745,
+            "29": 0.17495284974575043
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "violet",
+        "split": "validation",
+        "query": "When does the Violet laboratory open?",
+        "context": "In the fictional Violet laboratory handbook, the Violet laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Violet.",
+        "answer": "The Violet laboratory opens at 13:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6498162932693958,
+        "pks_nats": 0.0652210763655603,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5581730008125305,
+            "15:1": 0.5773850679397583,
+            "15:2": 0.5640663504600525,
+            "15:3": 0.6058208346366882,
+            "26:0": 0.6339195370674133,
+            "26:1": 0.6806588172912598,
+            "26:2": 0.6033248901367188,
+            "26:3": 0.6683053374290466,
+            "28:0": 0.6696855425834656,
+            "28:1": 0.6798414587974548,
+            "28:2": 0.5759409070014954,
+            "28:3": 0.7036178708076477,
+            "29:0": 0.7421311736106873,
+            "29:1": 0.7671120166778564,
+            "29:2": 0.7584406137466431,
+            "29:3": 0.608637273311615
+          },
+          "pks": {
+            "15": 0.03147581219673157,
+            "26": 0.016089076176285744,
+            "28": 0.047936733812093735,
+            "29": 0.16538268327713013
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "violet",
+        "split": "validation",
+        "query": "When does the Violet laboratory open?",
+        "context": "In the fictional Violet laboratory handbook, the Violet laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Violet.",
+        "answer": "The Violet laboratory opens at 08:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6541804522275925,
+        "pks_nats": 0.06917560566216707,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5897323489189148,
+            "15:1": 0.6010571718215942,
+            "15:2": 0.567107617855072,
+            "15:3": 0.6265624165534973,
+            "26:0": 0.6426287889480591,
+            "26:1": 0.6628143787384033,
+            "26:2": 0.5852923393249512,
+            "26:3": 0.670451283454895,
+            "28:0": 0.6457158923149109,
+            "28:1": 0.6658504605293274,
+            "28:2": 0.569378674030304,
+            "28:3": 0.7159287929534912,
+            "29:0": 0.7620975971221924,
+            "29:1": 0.7729865312576294,
+            "29:2": 0.7746463418006897,
+            "29:3": 0.6146366000175476
+          },
+          "pks": {
+            "15": 0.03237380087375641,
+            "26": 0.021881166845560074,
+            "28": 0.05810633301734924,
+            "29": 0.16434112191200256
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "willow",
+        "split": "validation",
+        "query": "When does the Willow laboratory open?",
+        "context": "In the fictional Willow laboratory handbook, the Willow laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Willow.",
+        "answer": "The Willow laboratory opens at 14:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6513494178652763,
+        "pks_nats": 0.05498881218954921,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.5560867786407471,
+            "15:1": 0.5669819712638855,
+            "15:2": 0.5369601845741272,
+            "15:3": 0.5998246073722839,
+            "26:0": 0.671509861946106,
+            "26:1": 0.6654626131057739,
+            "26:2": 0.6224254369735718,
+            "26:3": 0.6781716346740723,
+            "28:0": 0.6399194002151489,
+            "28:1": 0.7044231295585632,
+            "28:2": 0.661721408367157,
+            "28:3": 0.7025001049041748,
+            "29:0": 0.7807523608207703,
+            "29:1": 0.6997851133346558,
+            "29:2": 0.695349395275116,
+            "29:3": 0.6397166848182678
+          },
+          "pks": {
+            "15": 0.02733316831290722,
+            "26": 0.015637002885341644,
+            "28": 0.04463224858045578,
+            "29": 0.1323528289794922
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "willow",
+        "split": "validation",
+        "query": "When does the Willow laboratory open?",
+        "context": "In the fictional Willow laboratory handbook, the Willow laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Willow.",
+        "answer": "The Willow laboratory opens at 09:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6519984975457191,
+        "pks_nats": 0.05791449500247836,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.5745522975921631,
+            "15:1": 0.6058207750320435,
+            "15:2": 0.5688052177429199,
+            "15:3": 0.6044819355010986,
+            "26:0": 0.6464394330978394,
+            "26:1": 0.6691625118255615,
+            "26:2": 0.594169557094574,
+            "26:3": 0.6761705279350281,
+            "28:0": 0.6157820224761963,
+            "28:1": 0.6812914609909058,
+            "28:2": 0.6289312839508057,
+            "28:3": 0.7141348719596863,
+            "29:0": 0.789729118347168,
+            "29:1": 0.724276065826416,
+            "29:2": 0.7040151953697205,
+            "29:3": 0.6342136859893799
+          },
+          "pks": {
+            "15": 0.026591714471578598,
+            "26": 0.021495794877409935,
+            "28": 0.05266369506716728,
+            "29": 0.13090677559375763
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "xenia",
+        "split": "validation",
+        "query": "When does the Xenia laboratory open?",
+        "context": "In the fictional Xenia laboratory handbook, the Xenia laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Xenia.",
+        "answer": "The Xenia laboratory opens at 15:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6514451503753662,
+        "pks_nats": 0.06762901926413178,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5620359778404236,
+            "15:1": 0.5804681181907654,
+            "15:2": 0.5701056122779846,
+            "15:3": 0.5965107679367065,
+            "26:0": 0.6642321944236755,
+            "26:1": 0.7056609988212585,
+            "26:2": 0.6132422685623169,
+            "26:3": 0.6754770278930664,
+            "28:0": 0.6145345568656921,
+            "28:1": 0.6961859464645386,
+            "28:2": 0.6532851457595825,
+            "28:3": 0.7034919857978821,
+            "29:0": 0.7377665042877197,
+            "29:1": 0.7549425363540649,
+            "29:2": 0.7078661322593689,
+            "29:3": 0.587316632270813
+          },
+          "pks": {
+            "15": 0.029654577374458313,
+            "26": 0.016582677140831947,
+            "28": 0.06119237840175629,
+            "29": 0.1630864441394806
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "xenia",
+        "split": "validation",
+        "query": "When does the Xenia laboratory open?",
+        "context": "In the fictional Xenia laboratory handbook, the Xenia laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Xenia.",
+        "answer": "The Xenia laboratory opens at 10:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6593954712152481,
+        "pks_nats": 0.06949569191783667,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.585247814655304,
+            "15:1": 0.5825240015983582,
+            "15:2": 0.5704322457313538,
+            "15:3": 0.5965348482131958,
+            "26:0": 0.6582474112510681,
+            "26:1": 0.7039668560028076,
+            "26:2": 0.6232802271842957,
+            "26:3": 0.6846179962158203,
+            "28:0": 0.6120877861976624,
+            "28:1": 0.6989852786064148,
+            "28:2": 0.6597291827201843,
+            "28:3": 0.7100353240966797,
+            "29:0": 0.7478389143943787,
+            "29:1": 0.7698229551315308,
+            "29:2": 0.7518801093101501,
+            "29:3": 0.5950965881347656
+          },
+          "pks": {
+            "15": 0.02455233968794346,
+            "26": 0.0185102466493845,
+            "28": 0.0648856982588768,
+            "29": 0.1700344830751419
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "yarrow",
+        "split": "test",
+        "query": "When does the Yarrow laboratory open?",
+        "context": "In the fictional Yarrow laboratory handbook, the Yarrow laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Yarrow.",
+        "answer": "The Yarrow laboratory opens at 08:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6465418301522732,
+        "pks_nats": 0.0664247740060091,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5782842040061951,
+            "15:1": 0.5958644151687622,
+            "15:2": 0.5711414217948914,
+            "15:3": 0.6146632432937622,
+            "26:0": 0.669215977191925,
+            "26:1": 0.7009944915771484,
+            "26:2": 0.5821806788444519,
+            "26:3": 0.6593471169471741,
+            "28:0": 0.573094367980957,
+            "28:1": 0.6827962398529053,
+            "28:2": 0.6155808568000793,
+            "28:3": 0.7055919766426086,
+            "29:0": 0.7488989233970642,
+            "29:1": 0.7641421556472778,
+            "29:2": 0.7016842365264893,
+            "29:3": 0.581188976764679
+          },
+          "pks": {
+            "15": 0.02508898451924324,
+            "26": 0.014347176998853683,
+            "28": 0.06368411332368851,
+            "29": 0.16257882118225098
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "yarrow",
+        "split": "test",
+        "query": "When does the Yarrow laboratory open?",
+        "context": "In the fictional Yarrow laboratory handbook, the Yarrow laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Yarrow.",
+        "answer": "The Yarrow laboratory opens at 11:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6477870680391788,
+        "pks_nats": 0.07114596106112003,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 43,
+        "components": {
+          "ecs": {
+            "15:0": 0.5743129849433899,
+            "15:1": 0.5935971140861511,
+            "15:2": 0.5621002912521362,
+            "15:3": 0.6063153147697449,
+            "26:0": 0.6680341362953186,
+            "26:1": 0.6882603764533997,
+            "26:2": 0.5760563611984253,
+            "26:3": 0.6601011157035828,
+            "28:0": 0.5736005902290344,
+            "28:1": 0.6811754703521729,
+            "28:2": 0.6214618682861328,
+            "28:3": 0.7070784568786621,
+            "29:0": 0.762289822101593,
+            "29:1": 0.7758443355560303,
+            "29:2": 0.7200384140014648,
+            "29:3": 0.5943264365196228
+          },
+          "pks": {
+            "15": 0.026314038783311844,
+            "26": 0.014984529465436935,
+            "28": 0.06707312911748886,
+            "29": 0.1762121468782425
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "zinnia",
+        "split": "test",
+        "query": "When does the Zinnia laboratory open?",
+        "context": "In the fictional Zinnia laboratory handbook, the Zinnia laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Zinnia.",
+        "answer": "The Zinnia laboratory opens at 09:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.661547876894474,
+        "pks_nats": 0.06416224525310099,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 47,
+        "components": {
+          "ecs": {
+            "15:0": 0.5961048007011414,
+            "15:1": 0.5870404243469238,
+            "15:2": 0.5672622323036194,
+            "15:3": 0.6282899379730225,
+            "26:0": 0.7020622491836548,
+            "26:1": 0.7063722014427185,
+            "26:2": 0.6358975172042847,
+            "26:3": 0.6754685044288635,
+            "28:0": 0.5956177115440369,
+            "28:1": 0.6826865673065186,
+            "28:2": 0.6434832811355591,
+            "28:3": 0.7249730229377747,
+            "29:0": 0.747003972530365,
+            "29:1": 0.7761601209640503,
+            "29:2": 0.7452861666679382,
+            "29:3": 0.5710573196411133
+          },
+          "pks": {
+            "15": 0.032414473593235016,
+            "26": 0.013101496733725071,
+            "28": 0.060128964483737946,
+            "29": 0.15100404620170593
+          }
+        },
+        "response_tokens": 14,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "zinnia",
+        "split": "test",
+        "query": "When does the Zinnia laboratory open?",
+        "context": "In the fictional Zinnia laboratory handbook, the Zinnia laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Zinnia.",
+        "answer": "The Zinnia laboratory opens at 12:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.658523716032505,
+        "pks_nats": 0.067627057665959,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 47,
+        "components": {
+          "ecs": {
+            "15:0": 0.5980557799339294,
+            "15:1": 0.588006854057312,
+            "15:2": 0.5545079708099365,
+            "15:3": 0.6343242526054382,
+            "26:0": 0.6887174248695374,
+            "26:1": 0.687477707862854,
+            "26:2": 0.6242555379867554,
+            "26:3": 0.6766225099563599,
+            "28:0": 0.5901432037353516,
+            "28:1": 0.690657913684845,
+            "28:2": 0.6388909220695496,
+            "28:3": 0.7127902507781982,
+            "29:0": 0.762731671333313,
+            "29:1": 0.783814013004303,
+            "29:2": 0.7570205926895142,
+            "29:3": 0.5483628511428833
+          },
+          "pks": {
+            "15": 0.03142208978533745,
+            "26": 0.014958162792026997,
+            "28": 0.06527464091777802,
+            "29": 0.15885333716869354
+          }
+        },
+        "response_tokens": 14,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "amber",
+        "split": "test",
+        "query": "When does the Amber laboratory open?",
+        "context": "In the fictional Amber laboratory handbook, the Amber laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Amber.",
+        "answer": "The Amber laboratory opens at 10:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6445777676999569,
+        "pks_nats": 0.05468634283170104,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.5753263831138611,
+            "15:1": 0.5809646248817444,
+            "15:2": 0.5828953981399536,
+            "15:3": 0.5721234679222107,
+            "26:0": 0.6541606783866882,
+            "26:1": 0.690545916557312,
+            "26:2": 0.5670067667961121,
+            "26:3": 0.6715407967567444,
+            "28:0": 0.5587105751037598,
+            "28:1": 0.6616067290306091,
+            "28:2": 0.6601558327674866,
+            "28:3": 0.6971050500869751,
+            "29:0": 0.7398684024810791,
+            "29:1": 0.784856379032135,
+            "29:2": 0.7188443541526794,
+            "29:3": 0.5975329279899597
+          },
+          "pks": {
+            "15": 0.03206007555127144,
+            "26": 0.02141045220196247,
+            "28": 0.06037210673093796,
+            "29": 0.1049027368426323
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "amber",
+        "split": "test",
+        "query": "When does the Amber laboratory open?",
+        "context": "In the fictional Amber laboratory handbook, the Amber laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Amber.",
+        "answer": "The Amber laboratory opens at 13:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6462818868458271,
+        "pks_nats": 0.05352115165442228,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.5895434617996216,
+            "15:1": 0.6001562476158142,
+            "15:2": 0.5785247683525085,
+            "15:3": 0.5668071508407593,
+            "26:0": 0.6505619883537292,
+            "26:1": 0.6899155378341675,
+            "26:2": 0.5637761950492859,
+            "26:3": 0.6750598549842834,
+            "28:0": 0.5554653406143188,
+            "28:1": 0.6695647835731506,
+            "28:2": 0.6546630859375,
+            "28:3": 0.7013255953788757,
+            "29:0": 0.7456192970275879,
+            "29:1": 0.7931733131408691,
+            "29:2": 0.724751889705658,
+            "29:3": 0.5816016793251038
+          },
+          "pks": {
+            "15": 0.030817991122603416,
+            "26": 0.02233174256980419,
+            "28": 0.06607481092214584,
+            "29": 0.09486006200313568
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "beryl",
+        "split": "test",
+        "query": "When does the Beryl laboratory open?",
+        "context": "In the fictional Beryl laboratory handbook, the Beryl laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Beryl.",
+        "answer": "The Beryl laboratory opens at 11:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6387145295739174,
+        "pks_nats": 0.06616929499432445,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 46,
+        "components": {
+          "ecs": {
+            "15:0": 0.5511705279350281,
+            "15:1": 0.5522641539573669,
+            "15:2": 0.5331501960754395,
+            "15:3": 0.565546989440918,
+            "26:0": 0.6176918745040894,
+            "26:1": 0.6850237250328064,
+            "26:2": 0.5973905920982361,
+            "26:3": 0.6757072806358337,
+            "28:0": 0.6461961269378662,
+            "28:1": 0.6640961766242981,
+            "28:2": 0.5818976163864136,
+            "28:3": 0.68630450963974,
+            "29:0": 0.7572954893112183,
+            "29:1": 0.7873899936676025,
+            "29:2": 0.7480419874191284,
+            "29:3": 0.5702652335166931
+          },
+          "pks": {
+            "15": 0.032412346452474594,
+            "26": 0.01874913088977337,
+            "28": 0.060962993651628494,
+            "29": 0.15255270898342133
+          }
+        },
+        "response_tokens": 14,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "beryl",
+        "split": "test",
+        "query": "When does the Beryl laboratory open?",
+        "context": "In the fictional Beryl laboratory handbook, the Beryl laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Beryl.",
+        "answer": "The Beryl laboratory opens at 14:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.646211002022028,
+        "pks_nats": 0.06632814230397344,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 46,
+        "components": {
+          "ecs": {
+            "15:0": 0.5641921162605286,
+            "15:1": 0.5658029317855835,
+            "15:2": 0.5392276048660278,
+            "15:3": 0.5826395750045776,
+            "26:0": 0.6266657114028931,
+            "26:1": 0.683005690574646,
+            "26:2": 0.6025293469429016,
+            "26:3": 0.6803968548774719,
+            "28:0": 0.6461042761802673,
+            "28:1": 0.674731969833374,
+            "28:2": 0.5816075801849365,
+            "28:3": 0.6898928284645081,
+            "29:0": 0.7752142548561096,
+            "29:1": 0.7931783199310303,
+            "29:2": 0.7575010657310486,
+            "29:3": 0.576685905456543
+          },
+          "pks": {
+            "15": 0.030351944267749786,
+            "26": 0.01929701305925846,
+            "28": 0.06987661123275757,
+            "29": 0.14578700065612793
+          }
+        },
+        "response_tokens": 14,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "coral",
+        "split": "test",
+        "query": "When does the Coral laboratory open?",
+        "context": "In the fictional Coral laboratory handbook, the Coral laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Coral.",
+        "answer": "The Coral laboratory opens at 12:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6557564735412598,
+        "pks_nats": 0.06254274724051356,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.582622766494751,
+            "15:1": 0.5713196992874146,
+            "15:2": 0.5533499121665955,
+            "15:3": 0.5847455859184265,
+            "26:0": 0.6429024934768677,
+            "26:1": 0.6566367149353027,
+            "26:2": 0.5996307730674744,
+            "26:3": 0.6862646341323853,
+            "28:0": 0.681627631187439,
+            "28:1": 0.6766541004180908,
+            "28:2": 0.6613357067108154,
+            "28:3": 0.7193285822868347,
+            "29:0": 0.787036120891571,
+            "29:1": 0.7480354309082031,
+            "29:2": 0.7184902429580688,
+            "29:3": 0.6221231818199158
+          },
+          "pks": {
+            "15": 0.03188548609614372,
+            "26": 0.015847867354750633,
+            "28": 0.04231246933341026,
+            "29": 0.16012516617774963
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "coral",
+        "split": "test",
+        "query": "When does the Coral laboratory open?",
+        "context": "In the fictional Coral laboratory handbook, the Coral laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Coral.",
+        "answer": "The Coral laboratory opens at 15:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6619046553969383,
+        "pks_nats": 0.061433727853000164,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.5898486375808716,
+            "15:1": 0.5915135145187378,
+            "15:2": 0.5693527460098267,
+            "15:3": 0.595346212387085,
+            "26:0": 0.6562581658363342,
+            "26:1": 0.647890031337738,
+            "26:2": 0.5976812243461609,
+            "26:3": 0.6901914477348328,
+            "28:0": 0.6759194135665894,
+            "28:1": 0.6946617364883423,
+            "28:2": 0.6601426005363464,
+            "28:3": 0.7209579944610596,
+            "29:0": 0.7990362644195557,
+            "29:1": 0.7457430362701416,
+            "29:2": 0.7325066328048706,
+            "29:3": 0.6234248280525208
+          },
+          "pks": {
+            "15": 0.031191829591989517,
+            "26": 0.01582726463675499,
+            "28": 0.04585133120417595,
+            "29": 0.1528644859790802
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "delta",
+        "split": "test",
+        "query": "When does the Delta laboratory open?",
+        "context": "In the fictional Delta laboratory handbook, the Delta laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Delta.",
+        "answer": "The Delta laboratory opens at 13:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6817382089793682,
+        "pks_nats": 0.055647043976932764,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6153408288955688,
+            "15:1": 0.6146044731140137,
+            "15:2": 0.5919928550720215,
+            "15:3": 0.6460316181182861,
+            "26:0": 0.6761547923088074,
+            "26:1": 0.7008048892021179,
+            "26:2": 0.6537716388702393,
+            "26:3": 0.6978491544723511,
+            "28:0": 0.68690025806427,
+            "28:1": 0.7429952621459961,
+            "28:2": 0.6801180243492126,
+            "28:3": 0.7386149764060974,
+            "29:0": 0.7622923851013184,
+            "29:1": 0.7538356781005859,
+            "29:2": 0.7112947702407837,
+            "29:3": 0.6352097392082214
+          },
+          "pks": {
+            "15": 0.026885291561484337,
+            "26": 0.015698663890361786,
+            "28": 0.04646393284201622,
+            "29": 0.1335402876138687
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "delta",
+        "split": "test",
+        "query": "When does the Delta laboratory open?",
+        "context": "In the fictional Delta laboratory handbook, the Delta laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Delta.",
+        "answer": "The Delta laboratory opens at 08:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6883581839501858,
+        "pks_nats": 0.06175865000113845,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 39,
+        "components": {
+          "ecs": {
+            "15:0": 0.6427320837974548,
+            "15:1": 0.6445407867431641,
+            "15:2": 0.6062495112419128,
+            "15:3": 0.6611396074295044,
+            "26:0": 0.6681287288665771,
+            "26:1": 0.7035939693450928,
+            "26:2": 0.6581211090087891,
+            "26:3": 0.7053564786911011,
+            "28:0": 0.6850844621658325,
+            "28:1": 0.7361217737197876,
+            "28:2": 0.6768020391464233,
+            "28:3": 0.7445186972618103,
+            "29:0": 0.7731937170028687,
+            "29:1": 0.761431097984314,
+            "29:2": 0.7328672409057617,
+            "29:3": 0.6138496398925781
+          },
+          "pks": {
+            "15": 0.02806209586560726,
+            "26": 0.025134176015853882,
+            "28": 0.05920994281768799,
+            "29": 0.13462838530540466
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "ember",
+        "split": "test",
+        "query": "When does the Ember laboratory open?",
+        "context": "In the fictional Ember laboratory handbook, the Ember laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Ember.",
+        "answer": "The Ember laboratory opens at 14:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6493352204561234,
+        "pks_nats": 0.05306661128997803,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.5793699026107788,
+            "15:1": 0.587729811668396,
+            "15:2": 0.5914041996002197,
+            "15:3": 0.6055096387863159,
+            "26:0": 0.6784524321556091,
+            "26:1": 0.6899455189704895,
+            "26:2": 0.6051060557365417,
+            "26:3": 0.6639276742935181,
+            "28:0": 0.5567913055419922,
+            "28:1": 0.6774277687072754,
+            "28:2": 0.6209397315979004,
+            "28:3": 0.6792067885398865,
+            "29:0": 0.7598853707313538,
+            "29:1": 0.7776925563812256,
+            "29:2": 0.718988835811615,
+            "29:3": 0.596985936164856
+          },
+          "pks": {
+            "15": 0.027470501139760017,
+            "26": 0.015295101329684258,
+            "28": 0.06593241542577744,
+            "29": 0.1035684272646904
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "ember",
+        "split": "test",
+        "query": "When does the Ember laboratory open?",
+        "context": "In the fictional Ember laboratory handbook, the Ember laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Ember.",
+        "answer": "The Ember laboratory opens at 09:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6567196063697338,
+        "pks_nats": 0.05572569742798805,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 42,
+        "components": {
+          "ecs": {
+            "15:0": 0.6033190488815308,
+            "15:1": 0.6201891303062439,
+            "15:2": 0.5966675877571106,
+            "15:3": 0.6159979104995728,
+            "26:0": 0.6789071559906006,
+            "26:1": 0.6942909955978394,
+            "26:2": 0.5877536535263062,
+            "26:3": 0.6703464388847351,
+            "28:0": 0.5516934394836426,
+            "28:1": 0.6631176471710205,
+            "28:2": 0.6200747489929199,
+            "28:3": 0.6813445687294006,
+            "29:0": 0.7717607021331787,
+            "29:1": 0.7882866859436035,
+            "29:2": 0.7540682554244995,
+            "29:3": 0.6096957325935364
+          },
+          "pks": {
+            "15": 0.02587728574872017,
+            "26": 0.01942356303334236,
+            "28": 0.07412153482437134,
+            "29": 0.10348040610551834
+          }
+        },
+        "response_tokens": 13,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "flint",
+        "split": "test",
+        "query": "When does the Flint laboratory open?",
+        "context": "In the fictional Flint laboratory handbook, the Flint laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Flint.",
+        "answer": "The Flint laboratory opens at 15:00.",
+        "hallucinated": 0
+      },
+      "diagnosis": {
+        "ecs": 0.6643266342580318,
+        "pks_nats": 0.05077895778231323,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.572234034538269,
+            "15:1": 0.6046704053878784,
+            "15:2": 0.5556036233901978,
+            "15:3": 0.6054396033287048,
+            "26:0": 0.6488661170005798,
+            "26:1": 0.6931098699569702,
+            "26:2": 0.6426042318344116,
+            "26:3": 0.7001593112945557,
+            "28:0": 0.6793750524520874,
+            "28:1": 0.7103550434112549,
+            "28:2": 0.6534260511398315,
+            "28:3": 0.7173346281051636,
+            "29:0": 0.7685944437980652,
+            "29:1": 0.7392534017562866,
+            "29:2": 0.6870945692062378,
+            "29:3": 0.6511057615280151
+          },
+          "pks": {
+            "15": 0.02442491054534912,
+            "26": 0.01460044365376234,
+            "28": 0.04349251836538315,
+            "29": 0.1205979585647583
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    },
+    {
+      "case": {
+        "group": "flint",
+        "split": "test",
+        "query": "When does the Flint laboratory open?",
+        "context": "In the fictional Flint laboratory handbook, the Flint laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Flint.",
+        "answer": "The Flint laboratory opens at 10:00.",
+        "hallucinated": 1
+      },
+      "diagnosis": {
+        "ecs": 0.6746221520006657,
+        "pks_nats": 0.054619126953184605,
+        "layers": [
+          15,
+          26,
+          28,
+          29
+        ],
+        "heads": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "context_tokens": 40,
+        "components": {
+          "ecs": {
+            "15:0": 0.597753643989563,
+            "15:1": 0.6096181273460388,
+            "15:2": 0.5768417716026306,
+            "15:3": 0.6098066568374634,
+            "26:0": 0.6468902826309204,
+            "26:1": 0.7119302749633789,
+            "26:2": 0.6521055698394775,
+            "26:3": 0.6991399526596069,
+            "28:0": 0.683649480342865,
+            "28:1": 0.7122787237167358,
+            "28:2": 0.6592546105384827,
+            "28:3": 0.7451116442680359,
+            "29:0": 0.7890527248382568,
+            "29:1": 0.7542132139205933,
+            "29:2": 0.702547550201416,
+            "29:3": 0.6437602043151855
+          },
+          "pks": {
+            "15": 0.02022922784090042,
+            "26": 0.016494963318109512,
+            "28": 0.04839228838682175,
+            "29": 0.13336002826690674
+          }
+        },
+        "response_tokens": 12,
+        "calibrated": false,
+        "method": "ReDeEP-inspired response averages. Uncalibrated component selection."
+      }
+    }
+  ],
+  "device": "cuda"
+}

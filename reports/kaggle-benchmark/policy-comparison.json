@@ -1,0 +1,2679 @@
+{
+  "scope": "Controlled fictional handbooks, test source groups excluded from training and validation. Time extraction scores the stated opening time; no public benchmark claims.",
+  "device": "cuda",
+  "cases": 8,
+  "policies": {
+    "no_retrieval/off": {
+      "time_accuracy": 0.0,
+      "nli_support_rate": 0.0,
+      "abstention_rate": 0.0,
+      "mean_latency_ms": 1106.5625,
+      "generated_tokens": 219
+    },
+    "always_retrieve/off": {
+      "time_accuracy": 0.875,
+      "nli_support_rate": 1.0,
+      "abstention_rate": 0.0,
+      "mean_latency_ms": 1455.8575,
+      "generated_tokens": 332
+    },
+    "adaptive/off": {
+      "time_accuracy": 0.875,
+      "nli_support_rate": 1.0,
+      "abstention_rate": 0.0,
+      "mean_latency_ms": 3138.1525,
+      "generated_tokens": 1116
+    },
+    "adaptive/guarded": {
+      "time_accuracy": 0.875,
+      "nli_support_rate": 1.0,
+      "abstention_rate": 0.0,
+      "mean_latency_ms": 3115.0825,
+      "generated_tokens": 1116
+    }
+  },
+  "records": [
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "yarrow",
+      "expected": [
+        "08:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Yarrow laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 2054.01
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 27,
+        "latency_ms": 2054.03,
+        "id": "fe7f7be2835d4a6fa60c549763ff91f9",
+        "created_at": "2026-11-12T19:57:04.257665+00:00"
+      }
+    },
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "zinnia",
+      "expected": [
+        "09:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Zinnia laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Zinnia laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Zinnia laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 977.99
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 28,
+        "latency_ms": 978.01,
+        "id": "77de81d19fed4ba2a69b7db141197437",
+        "created_at": "2026-11-12T19:57:06.074691+00:00"
+      }
+    },
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "amber",
+      "expected": [
+        "10:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Amber laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 975.14
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 28,
+        "latency_ms": 975.15,
+        "id": "93d7e8f064a7485b9bbe38a04f541aa3",
+        "created_at": "2026-11-12T19:57:07.064128+00:00"
+      }
+    },
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "beryl",
+      "expected": [
+        "11:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Beryl laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Beryl laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Beryl laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 1010.82
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 28,
+        "latency_ms": 1010.84,
+        "id": "a2c071d3a62e4032bbecd48a24c7697e",
+        "created_at": "2026-11-12T19:57:08.098924+00:00"
+      }
+    },
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "coral",
+      "expected": [
+        "12:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Coral laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Coral laboratory is open from 10:00 AM to 6:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Coral laboratory is open from 10:00 AM to 6:00 PM on Saturdays and Sundays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 964.37
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 27,
+        "latency_ms": 964.38,
+        "id": "69c321c68dea4deaa79b54040be62c7c",
+        "created_at": "2026-11-12T19:57:09.156460+00:00"
+      }
+    },
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "delta",
+      "expected": [
+        "13:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Delta laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Delta laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Delta laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 928.14
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 26,
+        "latency_ms": 928.15,
+        "id": "9aec2bd323274ce98c41317e33e9f7d7",
+        "created_at": "2026-11-12T19:57:10.110379+00:00"
+      }
+    },
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "ember",
+      "expected": [
+        "14:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Ember laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Ember laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Ember laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 944.93
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 27,
+        "latency_ms": 944.94,
+        "id": "e5b4cbd78af4476c8879a556a9370025",
+        "created_at": "2026-11-12T19:57:11.073494+00:00"
+      }
+    },
+    {
+      "policy": "no_retrieval",
+      "correction": "off",
+      "group": "flint",
+      "expected": [
+        "15:00"
+      ],
+      "correct_time": false,
+      "nli_supported": false,
+      "result": {
+        "query": "When does the Flint laboratory open?",
+        "mode": "model",
+        "policy": "no_retrieval",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Flint laboratory is open from 10:00 AM to 6:00 PM on Fridays and Saturdays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [],
+        "answer": "The Flint laboratory is open from 10:00 AM to 6:00 PM on Fridays and Saturdays.",
+        "route": "accept_unverified",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 996.99
+          }
+        ],
+        "warnings": [
+          "Baseline generation without retrieval or evidence verification."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "supported": false,
+        "generation_calls": 1,
+        "generated_tokens": 28,
+        "latency_ms": 997.0,
+        "id": "5cf37aeaec6247b4ab8d7174e354b5f2",
+        "created_at": "2026-11-12T19:57:12.087826+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "yarrow",
+      "expected": [
+        "08:00"
+      ],
+      "correct_time": false,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Yarrow laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "yarrow",
+            "title": "yarrow laboratory hours",
+            "text": "In the fictional Yarrow laboratory handbook, the Yarrow laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Yarrow.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 927.37
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 927.48
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1733.16
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "supported": true,
+        "candidate_answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "generation_calls": 2,
+        "generated_tokens": 50,
+        "latency_ms": 1733.18,
+        "id": "1022b992345d44a18c6b760eaf61e0f3",
+        "created_at": "2026-11-12T19:57:13.835916+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "zinnia",
+      "expected": [
+        "09:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Zinnia laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Zinnia laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "zinnia",
+            "title": "zinnia laboratory hours",
+            "text": "In the fictional Zinnia laboratory handbook, the Zinnia laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Zinnia.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Zinnia laboratory opens at 09:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 969.25
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 969.35
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1467.05
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Zinnia laboratory opens at 09:00.",
+        "supported": true,
+        "candidate_answer": "The Zinnia laboratory opens at 09:00.",
+        "generation_calls": 2,
+        "generated_tokens": 42,
+        "latency_ms": 1467.07,
+        "id": "220c4e6605904cd59516500b01bcfb52",
+        "created_at": "2026-11-12T19:57:15.331716+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "amber",
+      "expected": [
+        "10:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Amber laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "amber",
+            "title": "amber laboratory hours",
+            "text": "In the fictional Amber laboratory handbook, the Amber laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Amber.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Amber laboratory opens at 10:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 933.77
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 933.86
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1395.32
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Amber laboratory opens at 10:00.",
+        "supported": true,
+        "candidate_answer": "The Amber laboratory opens at 10:00.",
+        "generation_calls": 2,
+        "generated_tokens": 41,
+        "latency_ms": 1395.33,
+        "id": "f1541578585f4e24afacf3aa68aa0bc7",
+        "created_at": "2026-11-12T19:57:16.741123+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "beryl",
+      "expected": [
+        "11:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Beryl laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Beryl laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "beryl",
+            "title": "beryl laboratory hours",
+            "text": "In the fictional Beryl laboratory handbook, the Beryl laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Beryl.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Beryl laboratory opens at 11:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 956.59
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 956.69
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1505.0
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Beryl laboratory opens at 11:00.",
+        "supported": true,
+        "candidate_answer": "The Beryl laboratory opens at 11:00.",
+        "generation_calls": 2,
+        "generated_tokens": 42,
+        "latency_ms": 1505.02,
+        "id": "773e2447694c46b99a8394726dc592c3",
+        "created_at": "2026-11-12T19:57:18.265503+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "coral",
+      "expected": [
+        "12:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Coral laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Coral laboratory is open from 10:00 AM to 6:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "coral",
+            "title": "coral laboratory hours",
+            "text": "In the fictional Coral laboratory handbook, the Coral laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Coral.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Coral laboratory opens at 12:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 917.89
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 917.98
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1350.3
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Coral laboratory opens at 12:00.",
+        "supported": true,
+        "candidate_answer": "The Coral laboratory opens at 12:00.",
+        "generation_calls": 2,
+        "generated_tokens": 39,
+        "latency_ms": 1350.31,
+        "id": "270cd32ff96947cfa5e52d46810505a9",
+        "created_at": "2026-11-12T19:57:19.678217+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "delta",
+      "expected": [
+        "13:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Delta laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Delta laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "delta",
+            "title": "delta laboratory hours",
+            "text": "In the fictional Delta laboratory handbook, the Delta laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Delta.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Delta laboratory opens at 13:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 894.46
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 894.57
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1349.12
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Delta laboratory opens at 13:00.",
+        "supported": true,
+        "candidate_answer": "The Delta laboratory opens at 13:00.",
+        "generation_calls": 2,
+        "generated_tokens": 38,
+        "latency_ms": 1349.14,
+        "id": "994746eba3284dcd8e475f644ee3a7ce",
+        "created_at": "2026-11-12T19:57:21.046643+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "ember",
+      "expected": [
+        "14:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Ember laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Ember laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "ember",
+            "title": "ember laboratory hours",
+            "text": "In the fictional Ember laboratory handbook, the Ember laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Ember.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Ember laboratory opens at 14:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 953.99
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 954.1
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1428.23
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Ember laboratory opens at 14:00.",
+        "supported": true,
+        "candidate_answer": "The Ember laboratory opens at 14:00.",
+        "generation_calls": 2,
+        "generated_tokens": 40,
+        "latency_ms": 1428.25,
+        "id": "28ae8086487046bcab6190f5131313ed",
+        "created_at": "2026-11-12T19:57:22.488371+00:00"
+      }
+    },
+    {
+      "policy": "always_retrieve",
+      "correction": "off",
+      "group": "flint",
+      "expected": [
+        "15:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Flint laboratory open?",
+        "mode": "model",
+        "policy": "always_retrieve",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Flint laboratory is open from 10:00 AM to 6:00 PM on Fridays and Saturdays.",
+        "samples": [],
+        "uncertainty": null,
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "flint",
+            "title": "flint laboratory hours",
+            "text": "In the fictional Flint laboratory handbook, the Flint laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Flint.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Flint laboratory opens at 15:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 967.01
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 967.11
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 1418.55
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Flint laboratory opens at 15:00.",
+        "supported": true,
+        "candidate_answer": "The Flint laboratory opens at 15:00.",
+        "generation_calls": 2,
+        "generated_tokens": 40,
+        "latency_ms": 1418.56,
+        "id": "ebb226d647874965b247a1bf55bafba2",
+        "created_at": "2026-11-12T19:57:23.929446+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "yarrow",
+      "expected": [
+        "08:00"
+      ],
+      "correct_time": false,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Yarrow laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Yarrow laboratory, located in the heart of the Redwood National and State Parks, is open from late October to early April.",
+          "The Yarrow laboratory is open from 10:00 AM to 4:00 PM every day.",
+          "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Yarrow laboratory, located in the heart of the Redwood National and State Parks, is open from late October to early April.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Yarrow laboratory is open from 10:00 AM to 4:00 PM every day.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "yarrow",
+            "title": "yarrow laboratory hours",
+            "text": "In the fictional Yarrow laboratory handbook, the Yarrow laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Yarrow.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 921.06
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2196.62
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2201.99
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3024.35
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "supported": true,
+        "candidate_answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "generation_calls": 3,
+        "generated_tokens": 129,
+        "latency_ms": 3024.37,
+        "id": "e3355976d4f84505bc32bb5db9fa9cb0",
+        "created_at": "2026-11-12T19:57:26.976848+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "zinnia",
+      "expected": [
+        "09:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Zinnia laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Zinnia laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Zinnia laboratory is open from 10:00 AM to 5:00 PM on Fridays and Saturdays. It is open 24/7 and operates 24 hours a day, making",
+          "The Zinnia laboratory is open from October 1st until June 30th for a 7-day trial period.",
+          "The Zinnia laboratory, which serves as the home of the \"Zinnia\" team, is currently open from 8:00 AM to 10:00 PM on Tuesdays, Wednesdays, and"
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Zinnia laboratory is open from 10:00 AM to 5:00 PM on Fridays and Saturdays. It is open 24/7 and operates 24 hours a day, making",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Zinnia laboratory is open from October 1st until June 30th for a 7-day trial period.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Zinnia laboratory, which serves as the home of the \"Zinnia\" team, is currently open from 8:00 AM to 10:00 PM on Tuesdays, Wednesdays, and",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "zinnia",
+            "title": "zinnia laboratory hours",
+            "text": "In the fictional Zinnia laboratory handbook, the Zinnia laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Zinnia.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Zinnia laboratory opens at 09:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 961.96
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2753.57
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2759.24
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3292.52
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Zinnia laboratory opens at 09:00.",
+        "supported": true,
+        "candidate_answer": "The Zinnia laboratory opens at 09:00.",
+        "generation_calls": 3,
+        "generated_tokens": 165,
+        "latency_ms": 3292.53,
+        "id": "7b387de03cff494d8bf01b813211c137",
+        "created_at": "2026-11-12T19:57:30.290510+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "amber",
+      "expected": [
+        "10:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Amber laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+        "samples": [
+          "The Amber laboratory, which opened on July 18, 2023, is open from June 15 to August 24.",
+          "The Amber laboratory is open from 10:00 AM to 4:00 PM every weekday. I am not able to provide current information on other times, but based on the information I have, I would say",
+          "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Amber laboratory, which opened on July 18, 2023, is open from June 15 to August 24.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Amber laboratory is open from 10:00 AM to 4:00 PM every weekday. I am not able to provide current information on other times, but based on the information I have, I would say",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "amber",
+            "title": "amber laboratory hours",
+            "text": "In the fictional Amber laboratory handbook, the Amber laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Amber.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Amber laboratory opens at 10:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 1012.28
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2825.38
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2830.42
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3310.48
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Amber laboratory opens at 10:00.",
+        "supported": true,
+        "candidate_answer": "The Amber laboratory opens at 10:00.",
+        "generation_calls": 3,
+        "generated_tokens": 149,
+        "latency_ms": 3310.49,
+        "id": "76e81f1f045b46d1a484f8cd76b13807",
+        "created_at": "2026-11-12T19:57:34.417395+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "beryl",
+      "expected": [
+        "11:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Beryl laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Beryl laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Beryl laboratory is open from 10:00 AM to 10:00 PM on Wednesdays and Saturdays.",
+          "The Beryl laboratory is open from July 1st until December 31st for a 7-day trial period.",
+          "The Beryl laboratory, which serves as the primary laboratory for studying the properties of Beryl, is open daily from 10:30 AM to 2:00 PM."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Beryl laboratory is open from 10:00 AM to 10:00 PM on Wednesdays and Saturdays.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Beryl laboratory is open from July 1st until December 31st for a 7-day trial period.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Beryl laboratory, which serves as the primary laboratory for studying the properties of Beryl, is open daily from 10:30 AM to 2:00 PM.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "beryl",
+            "title": "beryl laboratory hours",
+            "text": "In the fictional Beryl laboratory handbook, the Beryl laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Beryl.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Beryl laboratory opens at 11:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 984.55
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2512.39
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2517.85
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3022.76
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Beryl laboratory opens at 11:00.",
+        "supported": true,
+        "candidate_answer": "The Beryl laboratory opens at 11:00.",
+        "generation_calls": 3,
+        "generated_tokens": 141,
+        "latency_ms": 3022.78,
+        "id": "65efb461bad3403eb24be1dc5df67be2",
+        "created_at": "2026-11-12T19:57:38.691214+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "coral",
+      "expected": [
+        "12:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Coral laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Coral laboratory is open from 10:00 AM to 6:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Coral laboratory is open on Tuesdays and Wednesdays from 12:00 am to 4:00 pm. If you're visiting the Coral Laboratory during any other time, please let me know in the comments",
+          "The Coral Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+          "The Coral laboratory is open from September 1 to October 31."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Coral laboratory is open on Tuesdays and Wednesdays from 12:00 am to 4:00 pm. If you're visiting the Coral Laboratory during any other time, please let me know in the comments",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Coral Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Coral laboratory is open from September 1 to October 31.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "coral",
+            "title": "coral laboratory hours",
+            "text": "In the fictional Coral laboratory handbook, the Coral laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Coral.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Coral laboratory opens at 12:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 954.09
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2760.79
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2767.61
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3209.26
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Coral laboratory opens at 12:00.",
+        "supported": true,
+        "candidate_answer": "The Coral laboratory opens at 12:00.",
+        "generation_calls": 3,
+        "generated_tokens": 144,
+        "latency_ms": 3209.27,
+        "id": "25295e2f0a4141e1b458dcfb0b993d6a",
+        "created_at": "2026-11-12T19:57:41.924887+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "delta",
+      "expected": [
+        "13:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Delta laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Delta laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Delta laboratory is open on Sunday, April 18th, at 2:00 PM.",
+          "The Delta Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+          "The Delta laboratory is open from September 1 to October 31."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Delta laboratory is open on Sunday, April 18th, at 2:00 PM.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Delta Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Delta laboratory is open from September 1 to October 31.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "delta",
+            "title": "delta laboratory hours",
+            "text": "In the fictional Delta laboratory handbook, the Delta laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Delta.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Delta laboratory opens at 13:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 907.74
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2469.55
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2475.51
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 2950.03
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Delta laboratory opens at 13:00.",
+        "supported": true,
+        "candidate_answer": "The Delta laboratory opens at 13:00.",
+        "generation_calls": 3,
+        "generated_tokens": 117,
+        "latency_ms": 2950.04,
+        "id": "b3cb3b399ccd4dd3b50356a86b2b4570",
+        "created_at": "2026-11-12T19:57:44.893995+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "ember",
+      "expected": [
+        "14:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Ember laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Ember laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Ember laboratory, located in the heart of the city, is open from 9:00 AM to 5:00 PM on weekdays and 11:00 AM to 5:00 PM on",
+          "The Ember laboratory is open from 10:00 AM to 4:00 PM every day.",
+          "The Ember laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays, with Monday through Sunday closed."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Ember laboratory, located in the heart of the city, is open from 9:00 AM to 5:00 PM on weekdays and 11:00 AM to 5:00 PM on",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Ember laboratory is open from 10:00 AM to 4:00 PM every day.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Ember laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays, with Monday through Sunday closed.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "ember",
+            "title": "ember laboratory hours",
+            "text": "In the fictional Ember laboratory handbook, the Ember laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Ember.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Ember laboratory opens at 14:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 926.81
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2622.58
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2627.92
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3102.77
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Ember laboratory opens at 14:00.",
+        "supported": true,
+        "candidate_answer": "The Ember laboratory opens at 14:00.",
+        "generation_calls": 3,
+        "generated_tokens": 146,
+        "latency_ms": 3102.79,
+        "id": "ec2758f919bf4b3d9a82b04c388b1341",
+        "created_at": "2026-11-12T19:57:48.021248+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "off",
+      "group": "flint",
+      "expected": [
+        "15:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Flint laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "off",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Flint laboratory is open from 10:00 AM to 6:00 PM on Fridays and Saturdays.",
+        "samples": [
+          "The Flint laboratory is open on Sunday, April 18th, at 2:00 PM.",
+          "The Flint Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent two shifts on Saturday and Sunday. The laboratory is open from 10:",
+          "The Flint laboratory is open from September 1 to October 31."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Flint laboratory is open on Sunday, April 18th, at 2:00 PM.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Flint Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent two shifts on Saturday and Sunday. The laboratory is open from 10:",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Flint laboratory is open from September 1 to October 31.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": null,
+        "documents": [
+          {
+            "id": "flint",
+            "title": "flint laboratory hours",
+            "text": "In the fictional Flint laboratory handbook, the Flint laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Flint.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Flint laboratory opens at 15:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 970.64
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2691.41
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2696.44
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3192.94
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. No calibrated detector is active."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Flint laboratory opens at 15:00.",
+        "supported": true,
+        "candidate_answer": "The Flint laboratory opens at 15:00.",
+        "generation_calls": 3,
+        "generated_tokens": 125,
+        "latency_ms": 3192.95,
+        "id": "7d7d4db8acfd4bf4bc165a8b6e790673",
+        "created_at": "2026-11-12T19:57:51.234420+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "yarrow",
+      "expected": [
+        "08:00"
+      ],
+      "correct_time": false,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Yarrow laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Yarrow laboratory, located in the heart of the Redwood National and State Parks, is open from late October to early April.",
+          "The Yarrow laboratory is open from 10:00 AM to 4:00 PM every day.",
+          "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Yarrow laboratory, located in the heart of the Redwood National and State Parks, is open from late October to early April.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Yarrow laboratory is open from 10:00 AM to 4:00 PM every day.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Yarrow laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.6779818534851074,
+          "pks_nats": 0.0207472313195467,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 43,
+          "components": {
+            "ecs": {
+              "26:1": 0.6779818534851074
+            },
+            "pks": {
+              "26": 0.0207472313195467
+            }
+          },
+          "response_tokens": 23,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.9950683787284644,
+          "flagged": true
+        },
+        "documents": [
+          {
+            "id": "yarrow",
+            "title": "yarrow laboratory hours",
+            "text": "In the fictional Yarrow laboratory handbook, the Yarrow laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Yarrow.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 929.35
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 1965.65
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 1970.49
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 2900.27
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 2905.59
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "supported": true,
+        "candidate_answer": "The Yarrow laboratory is open at 08:00 and closes at 19:00.",
+        "generation_calls": 3,
+        "generated_tokens": 129,
+        "latency_ms": 2905.6,
+        "id": "ef66a80cb5b3446faf95a54f6996b034",
+        "created_at": "2026-11-12T19:57:54.164116+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "zinnia",
+      "expected": [
+        "09:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Zinnia laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Zinnia laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Zinnia laboratory is open from 10:00 AM to 5:00 PM on Fridays and Saturdays. It is open 24/7 and operates 24 hours a day, making",
+          "The Zinnia laboratory is open from October 1st until June 30th for a 7-day trial period.",
+          "The Zinnia laboratory, which serves as the home of the \"Zinnia\" team, is currently open from 8:00 AM to 10:00 PM on Tuesdays, Wednesdays, and"
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Zinnia laboratory is open from 10:00 AM to 5:00 PM on Fridays and Saturdays. It is open 24/7 and operates 24 hours a day, making",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Zinnia laboratory is open from October 1st until June 30th for a 7-day trial period.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Zinnia laboratory, which serves as the home of the \"Zinnia\" team, is currently open from 8:00 AM to 10:00 PM on Tuesdays, Wednesdays, and",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.7063722014427185,
+          "pks_nats": 0.013101496733725071,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 47,
+          "components": {
+            "ecs": {
+              "26:1": 0.7063722014427185
+            },
+            "pks": {
+              "26": 0.013101496733725071
+            }
+          },
+          "response_tokens": 14,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.03763108270155393,
+          "flagged": false
+        },
+        "documents": [
+          {
+            "id": "zinnia",
+            "title": "zinnia laboratory hours",
+            "text": "In the fictional Zinnia laboratory handbook, the Zinnia laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Zinnia.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Zinnia laboratory opens at 09:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 955.73
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2676.16
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2681.3
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 3216.22
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3221.22
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Zinnia laboratory opens at 09:00.",
+        "supported": true,
+        "candidate_answer": "The Zinnia laboratory opens at 09:00.",
+        "generation_calls": 3,
+        "generated_tokens": 165,
+        "latency_ms": 3221.23,
+        "id": "aeff55758cad4c1a911255044ae8d5b5",
+        "created_at": "2026-11-12T19:57:57.410453+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "amber",
+      "expected": [
+        "10:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Amber laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+        "samples": [
+          "The Amber laboratory, which opened on July 18, 2023, is open from June 15 to August 24.",
+          "The Amber laboratory is open from 10:00 AM to 4:00 PM every weekday. I am not able to provide current information on other times, but based on the information I have, I would say",
+          "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Amber laboratory, which opened on July 18, 2023, is open from June 15 to August 24.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Amber laboratory is open from 10:00 AM to 4:00 PM every weekday. I am not able to provide current information on other times, but based on the information I have, I would say",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Amber laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.690545916557312,
+          "pks_nats": 0.02141045220196247,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 42,
+          "components": {
+            "ecs": {
+              "26:1": 0.690545916557312
+            },
+            "pks": {
+              "26": 0.02141045220196247
+            }
+          },
+          "response_tokens": 13,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.9934182844179833,
+          "flagged": true
+        },
+        "documents": [
+          {
+            "id": "amber",
+            "title": "amber laboratory hours",
+            "text": "In the fictional Amber laboratory handbook, the Amber laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Amber.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Amber laboratory opens at 10:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 967.06
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2669.68
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2674.37
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 3179.72
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3184.88
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Amber laboratory opens at 10:00.",
+        "supported": true,
+        "candidate_answer": "The Amber laboratory opens at 10:00.",
+        "generation_calls": 3,
+        "generated_tokens": 149,
+        "latency_ms": 3184.89,
+        "id": "946b62154b724a878e1069b04fec1816",
+        "created_at": "2026-11-12T19:58:00.616767+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "beryl",
+      "expected": [
+        "11:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Beryl laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Beryl laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Beryl laboratory is open from 10:00 AM to 10:00 PM on Wednesdays and Saturdays.",
+          "The Beryl laboratory is open from July 1st until December 31st for a 7-day trial period.",
+          "The Beryl laboratory, which serves as the primary laboratory for studying the properties of Beryl, is open daily from 10:30 AM to 2:00 PM."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Beryl laboratory is open from 10:00 AM to 10:00 PM on Wednesdays and Saturdays.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Beryl laboratory is open from July 1st until December 31st for a 7-day trial period.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Beryl laboratory, which serves as the primary laboratory for studying the properties of Beryl, is open daily from 10:30 AM to 2:00 PM.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.6850237250328064,
+          "pks_nats": 0.01874913088977337,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 46,
+          "components": {
+            "ecs": {
+              "26:1": 0.6850237250328064
+            },
+            "pks": {
+              "26": 0.01874913088977337
+            }
+          },
+          "response_tokens": 14,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.9568509484379796,
+          "flagged": false
+        },
+        "documents": [
+          {
+            "id": "beryl",
+            "title": "beryl laboratory hours",
+            "text": "In the fictional Beryl laboratory handbook, the Beryl laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Beryl.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Beryl laboratory opens at 11:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 1001.92
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2481.24
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2487.38
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 3061.93
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3067.03
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Beryl laboratory opens at 11:00.",
+        "supported": true,
+        "candidate_answer": "The Beryl laboratory opens at 11:00.",
+        "generation_calls": 3,
+        "generated_tokens": 141,
+        "latency_ms": 3067.04,
+        "id": "ecec4906a7884445a71d22d1cccb7ab1",
+        "created_at": "2026-11-12T19:58:03.703920+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "coral",
+      "expected": [
+        "12:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Coral laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Coral laboratory is open from 10:00 AM to 6:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Coral laboratory is open on Tuesdays and Wednesdays from 12:00 am to 4:00 pm. If you're visiting the Coral Laboratory during any other time, please let me know in the comments",
+          "The Coral Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+          "The Coral laboratory is open from September 1 to October 31."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Coral laboratory is open on Tuesdays and Wednesdays from 12:00 am to 4:00 pm. If you're visiting the Coral Laboratory during any other time, please let me know in the comments",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Coral Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Coral laboratory is open from September 1 to October 31.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.6566367149353027,
+          "pks_nats": 0.015847867354750633,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 40,
+          "components": {
+            "ecs": {
+              "26:1": 0.6566367149353027
+            },
+            "pks": {
+              "26": 0.015847867354750633
+            }
+          },
+          "response_tokens": 12,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.9271738823557102,
+          "flagged": false
+        },
+        "documents": [
+          {
+            "id": "coral",
+            "title": "coral laboratory hours",
+            "text": "In the fictional Coral laboratory handbook, the Coral laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Coral.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Coral laboratory opens at 12:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 950.9
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2732.02
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2738.57
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 3227.77
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3232.86
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Coral laboratory opens at 12:00.",
+        "supported": true,
+        "candidate_answer": "The Coral laboratory opens at 12:00.",
+        "generation_calls": 3,
+        "generated_tokens": 144,
+        "latency_ms": 3232.87,
+        "id": "1fe00eef69844904b99ba6ee19602652",
+        "created_at": "2026-11-12T19:58:06.961293+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "delta",
+      "expected": [
+        "13:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Delta laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Delta laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Delta laboratory is open on Sunday, April 18th, at 2:00 PM.",
+          "The Delta Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+          "The Delta laboratory is open from September 1 to October 31."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Delta laboratory is open on Sunday, April 18th, at 2:00 PM.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Delta Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent open times on Saturday, Sunday, and Wednesday.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Delta laboratory is open from September 1 to October 31.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.7008048892021179,
+          "pks_nats": 0.015698663890361786,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 39,
+          "components": {
+            "ecs": {
+              "26:1": 0.7008048892021179
+            },
+            "pks": {
+              "26": 0.015698663890361786
+            }
+          },
+          "response_tokens": 12,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.3503290618172399,
+          "flagged": false
+        },
+        "documents": [
+          {
+            "id": "delta",
+            "title": "delta laboratory hours",
+            "text": "In the fictional Delta laboratory handbook, the Delta laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Delta.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Delta laboratory opens at 13:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 883.24
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2409.57
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2414.75
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 2891.8
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 2896.84
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Delta laboratory opens at 13:00.",
+        "supported": true,
+        "candidate_answer": "The Delta laboratory opens at 13:00.",
+        "generation_calls": 3,
+        "generated_tokens": 117,
+        "latency_ms": 2896.85,
+        "id": "e07cb06a72064b0192a94b4642d36f56",
+        "created_at": "2026-11-12T19:58:09.884409+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "ember",
+      "expected": [
+        "14:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Ember laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Ember laboratory is open from 9:00 AM to 5:00 PM on Saturdays and Sundays.",
+        "samples": [
+          "The Ember laboratory, located in the heart of the city, is open from 9:00 AM to 5:00 PM on weekdays and 11:00 AM to 5:00 PM on",
+          "The Ember laboratory is open from 10:00 AM to 4:00 PM every day.",
+          "The Ember laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays, with Monday through Sunday closed."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Ember laboratory, located in the heart of the city, is open from 9:00 AM to 5:00 PM on weekdays and 11:00 AM to 5:00 PM on",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Ember laboratory is open from 10:00 AM to 4:00 PM every day.",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Ember laboratory is open from 9:00 AM to 5:00 PM on Fridays and Saturdays, with Monday through Sunday closed.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.6899455189704895,
+          "pks_nats": 0.015295101329684258,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 42,
+          "components": {
+            "ecs": {
+              "26:1": 0.6899455189704895
+            },
+            "pks": {
+              "26": 0.015295101329684258
+            }
+          },
+          "response_tokens": 13,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.44516073348873325,
+          "flagged": false
+        },
+        "documents": [
+          {
+            "id": "ember",
+            "title": "ember laboratory hours",
+            "text": "In the fictional Ember laboratory handbook, the Ember laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Ember.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Ember laboratory opens at 14:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 939.75
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2674.0
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2679.21
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 3197.13
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3201.92
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Ember laboratory opens at 14:00.",
+        "supported": true,
+        "candidate_answer": "The Ember laboratory opens at 14:00.",
+        "generation_calls": 3,
+        "generated_tokens": 146,
+        "latency_ms": 3201.93,
+        "id": "e4af8c05e64144b7b61e6304b07fbe7d",
+        "created_at": "2026-11-12T19:58:13.107142+00:00"
+      }
+    },
+    {
+      "policy": "adaptive",
+      "correction": "guarded",
+      "group": "flint",
+      "expected": [
+        "15:00"
+      ],
+      "correct_time": true,
+      "nli_supported": true,
+      "result": {
+        "query": "When does the Flint laboratory open?",
+        "mode": "model",
+        "policy": "adaptive",
+        "correction": "guarded",
+        "threshold_nats": 0.65,
+        "seed": 42,
+        "initial_answer": "The Flint laboratory is open from 10:00 AM to 6:00 PM on Fridays and Saturdays.",
+        "samples": [
+          "The Flint laboratory is open on Sunday, April 18th, at 2:00 PM.",
+          "The Flint Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent two shifts on Saturday and Sunday. The laboratory is open from 10:",
+          "The Flint laboratory is open from September 1 to October 31."
+        ],
+        "uncertainty": {
+          "clusters": [
+            {
+              "label": "The Flint laboratory is open on Sunday, April 18th, at 2:00 PM.",
+              "members": [
+                0
+              ]
+            },
+            {
+              "label": "The Flint Laboratory is open from 9:00 AM to 6:00 PM Monday to Friday, Monday through Thursday, except for the most recent two shifts on Saturday and Sunday. The laboratory is open from 10:",
+              "members": [
+                1
+              ]
+            },
+            {
+              "label": "The Flint laboratory is open from September 1 to October 31.",
+              "members": [
+                2
+              ]
+            }
+          ],
+          "entropy_nats": 1.0986122886681096,
+          "max_entropy_nats": 1.0986122886681098,
+          "sample_count": 3,
+          "method": "Bidirectional NLI, complete-link clusters, empirical frequencies"
+        },
+        "diagnosis": {
+          "ecs": 0.6931098699569702,
+          "pks_nats": 0.01460044365376234,
+          "layers": [
+            26
+          ],
+          "heads": [
+            1
+          ],
+          "context_tokens": 40,
+          "components": {
+            "ecs": {
+              "26:1": 0.6931098699569702
+            },
+            "pks": {
+              "26": 0.01460044365376234
+            }
+          },
+          "response_tokens": 12,
+          "calibrated": true,
+          "method": "ReDeEP-inspired response averages. Components selected on training data; classifier threshold chosen on validation data.",
+          "hallucination_probability": 0.26170872290052555,
+          "flagged": false
+        },
+        "documents": [
+          {
+            "id": "flint",
+            "title": "flint laboratory hours",
+            "text": "In the fictional Flint laboratory handbook, the Flint laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Flint.",
+            "source": "Controlled fictional handbook",
+            "chunk": 0,
+            "score": 3.353,
+            "query_coverage": 0.667
+          }
+        ],
+        "answer": "The Flint laboratory opens at 15:00.",
+        "route": "retrieval",
+        "trace": [
+          {
+            "stage": "generation",
+            "detail": "Greedy answer without retrieved context",
+            "elapsed_ms": 973.13
+          },
+          {
+            "stage": "uncertainty",
+            "detail": "3 semantic clusters",
+            "elapsed_ms": 2713.39
+          },
+          {
+            "stage": "retrieval",
+            "detail": "1 relevant chunks retrieved before context diagnosis",
+            "elapsed_ms": 2718.34
+          },
+          {
+            "stage": "diagnosis",
+            "detail": "Measured attention/hidden-state ECS and residual-stream PKS",
+            "elapsed_ms": 3204.95
+          },
+          {
+            "stage": "verification",
+            "detail": "NLI evidence support passed",
+            "elapsed_ms": 3210.24
+          }
+        ],
+        "warnings": [
+          "NLI support is an imperfect check. The detector uses fitted context-consistency calibration."
+        ],
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "context_answer": "The Flint laboratory opens at 15:00.",
+        "supported": true,
+        "candidate_answer": "The Flint laboratory opens at 15:00.",
+        "generation_calls": 3,
+        "generated_tokens": 125,
+        "latency_ms": 3210.25,
+        "id": "a849149e65ae432ab66e4f2205e8492a",
+        "created_at": "2026-11-12T19:58:16.337568+00:00"
+      }
+    }
+  ],
+  "status": "complete",
+  "methodology": "All policies include an initial context-free generation. Always-retrieve skips sampling. No timing savings are assumed."
+}

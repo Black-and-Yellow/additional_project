@@ -1,0 +1,514 @@
+[
+  {
+    "group": "aster",
+    "split": "train",
+    "query": "When does the Aster laboratory open?",
+    "context": "In the fictional Aster laboratory handbook, the Aster laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Aster.",
+    "answer": "The Aster laboratory opens at 08:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "aster",
+    "split": "train",
+    "query": "When does the Aster laboratory open?",
+    "context": "In the fictional Aster laboratory handbook, the Aster laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Aster.",
+    "answer": "The Aster laboratory opens at 11:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "birch",
+    "split": "train",
+    "query": "When does the Birch laboratory open?",
+    "context": "In the fictional Birch laboratory handbook, the Birch laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Birch.",
+    "answer": "The Birch laboratory opens at 09:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "birch",
+    "split": "train",
+    "query": "When does the Birch laboratory open?",
+    "context": "In the fictional Birch laboratory handbook, the Birch laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Birch.",
+    "answer": "The Birch laboratory opens at 12:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "cedar",
+    "split": "train",
+    "query": "When does the Cedar laboratory open?",
+    "context": "In the fictional Cedar laboratory handbook, the Cedar laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Cedar.",
+    "answer": "The Cedar laboratory opens at 10:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "cedar",
+    "split": "train",
+    "query": "When does the Cedar laboratory open?",
+    "context": "In the fictional Cedar laboratory handbook, the Cedar laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Cedar.",
+    "answer": "The Cedar laboratory opens at 13:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "dahlia",
+    "split": "train",
+    "query": "When does the Dahlia laboratory open?",
+    "context": "In the fictional Dahlia laboratory handbook, the Dahlia laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Dahlia.",
+    "answer": "The Dahlia laboratory opens at 11:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "dahlia",
+    "split": "train",
+    "query": "When does the Dahlia laboratory open?",
+    "context": "In the fictional Dahlia laboratory handbook, the Dahlia laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Dahlia.",
+    "answer": "The Dahlia laboratory opens at 14:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "elm",
+    "split": "train",
+    "query": "When does the Elm laboratory open?",
+    "context": "In the fictional Elm laboratory handbook, the Elm laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Elm.",
+    "answer": "The Elm laboratory opens at 12:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "elm",
+    "split": "train",
+    "query": "When does the Elm laboratory open?",
+    "context": "In the fictional Elm laboratory handbook, the Elm laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Elm.",
+    "answer": "The Elm laboratory opens at 15:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "fir",
+    "split": "train",
+    "query": "When does the Fir laboratory open?",
+    "context": "In the fictional Fir laboratory handbook, the Fir laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Fir.",
+    "answer": "The Fir laboratory opens at 13:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "fir",
+    "split": "train",
+    "query": "When does the Fir laboratory open?",
+    "context": "In the fictional Fir laboratory handbook, the Fir laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Fir.",
+    "answer": "The Fir laboratory opens at 08:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "grove",
+    "split": "train",
+    "query": "When does the Grove laboratory open?",
+    "context": "In the fictional Grove laboratory handbook, the Grove laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Grove.",
+    "answer": "The Grove laboratory opens at 14:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "grove",
+    "split": "train",
+    "query": "When does the Grove laboratory open?",
+    "context": "In the fictional Grove laboratory handbook, the Grove laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Grove.",
+    "answer": "The Grove laboratory opens at 09:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "hazel",
+    "split": "train",
+    "query": "When does the Hazel laboratory open?",
+    "context": "In the fictional Hazel laboratory handbook, the Hazel laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Hazel.",
+    "answer": "The Hazel laboratory opens at 15:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "hazel",
+    "split": "train",
+    "query": "When does the Hazel laboratory open?",
+    "context": "In the fictional Hazel laboratory handbook, the Hazel laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Hazel.",
+    "answer": "The Hazel laboratory opens at 10:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "iris",
+    "split": "train",
+    "query": "When does the Iris laboratory open?",
+    "context": "In the fictional Iris laboratory handbook, the Iris laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Iris.",
+    "answer": "The Iris laboratory opens at 08:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "iris",
+    "split": "train",
+    "query": "When does the Iris laboratory open?",
+    "context": "In the fictional Iris laboratory handbook, the Iris laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Iris.",
+    "answer": "The Iris laboratory opens at 11:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "juniper",
+    "split": "train",
+    "query": "When does the Juniper laboratory open?",
+    "context": "In the fictional Juniper laboratory handbook, the Juniper laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Juniper.",
+    "answer": "The Juniper laboratory opens at 09:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "juniper",
+    "split": "train",
+    "query": "When does the Juniper laboratory open?",
+    "context": "In the fictional Juniper laboratory handbook, the Juniper laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Juniper.",
+    "answer": "The Juniper laboratory opens at 12:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "kestrel",
+    "split": "train",
+    "query": "When does the Kestrel laboratory open?",
+    "context": "In the fictional Kestrel laboratory handbook, the Kestrel laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Kestrel.",
+    "answer": "The Kestrel laboratory opens at 10:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "kestrel",
+    "split": "train",
+    "query": "When does the Kestrel laboratory open?",
+    "context": "In the fictional Kestrel laboratory handbook, the Kestrel laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Kestrel.",
+    "answer": "The Kestrel laboratory opens at 13:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "larch",
+    "split": "train",
+    "query": "When does the Larch laboratory open?",
+    "context": "In the fictional Larch laboratory handbook, the Larch laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Larch.",
+    "answer": "The Larch laboratory opens at 11:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "larch",
+    "split": "train",
+    "query": "When does the Larch laboratory open?",
+    "context": "In the fictional Larch laboratory handbook, the Larch laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Larch.",
+    "answer": "The Larch laboratory opens at 14:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "maple",
+    "split": "train",
+    "query": "When does the Maple laboratory open?",
+    "context": "In the fictional Maple laboratory handbook, the Maple laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Maple.",
+    "answer": "The Maple laboratory opens at 12:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "maple",
+    "split": "train",
+    "query": "When does the Maple laboratory open?",
+    "context": "In the fictional Maple laboratory handbook, the Maple laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Maple.",
+    "answer": "The Maple laboratory opens at 15:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "nectar",
+    "split": "train",
+    "query": "When does the Nectar laboratory open?",
+    "context": "In the fictional Nectar laboratory handbook, the Nectar laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Nectar.",
+    "answer": "The Nectar laboratory opens at 13:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "nectar",
+    "split": "train",
+    "query": "When does the Nectar laboratory open?",
+    "context": "In the fictional Nectar laboratory handbook, the Nectar laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Nectar.",
+    "answer": "The Nectar laboratory opens at 08:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "olive",
+    "split": "train",
+    "query": "When does the Olive laboratory open?",
+    "context": "In the fictional Olive laboratory handbook, the Olive laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Olive.",
+    "answer": "The Olive laboratory opens at 14:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "olive",
+    "split": "train",
+    "query": "When does the Olive laboratory open?",
+    "context": "In the fictional Olive laboratory handbook, the Olive laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Olive.",
+    "answer": "The Olive laboratory opens at 09:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "pine",
+    "split": "train",
+    "query": "When does the Pine laboratory open?",
+    "context": "In the fictional Pine laboratory handbook, the Pine laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Pine.",
+    "answer": "The Pine laboratory opens at 15:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "pine",
+    "split": "train",
+    "query": "When does the Pine laboratory open?",
+    "context": "In the fictional Pine laboratory handbook, the Pine laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Pine.",
+    "answer": "The Pine laboratory opens at 10:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "quartz",
+    "split": "validation",
+    "query": "When does the Quartz laboratory open?",
+    "context": "In the fictional Quartz laboratory handbook, the Quartz laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Quartz.",
+    "answer": "The Quartz laboratory opens at 08:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "quartz",
+    "split": "validation",
+    "query": "When does the Quartz laboratory open?",
+    "context": "In the fictional Quartz laboratory handbook, the Quartz laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Quartz.",
+    "answer": "The Quartz laboratory opens at 11:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "reed",
+    "split": "validation",
+    "query": "When does the Reed laboratory open?",
+    "context": "In the fictional Reed laboratory handbook, the Reed laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Reed.",
+    "answer": "The Reed laboratory opens at 09:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "reed",
+    "split": "validation",
+    "query": "When does the Reed laboratory open?",
+    "context": "In the fictional Reed laboratory handbook, the Reed laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Reed.",
+    "answer": "The Reed laboratory opens at 12:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "spruce",
+    "split": "validation",
+    "query": "When does the Spruce laboratory open?",
+    "context": "In the fictional Spruce laboratory handbook, the Spruce laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Spruce.",
+    "answer": "The Spruce laboratory opens at 10:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "spruce",
+    "split": "validation",
+    "query": "When does the Spruce laboratory open?",
+    "context": "In the fictional Spruce laboratory handbook, the Spruce laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Spruce.",
+    "answer": "The Spruce laboratory opens at 13:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "thistle",
+    "split": "validation",
+    "query": "When does the Thistle laboratory open?",
+    "context": "In the fictional Thistle laboratory handbook, the Thistle laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Thistle.",
+    "answer": "The Thistle laboratory opens at 11:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "thistle",
+    "split": "validation",
+    "query": "When does the Thistle laboratory open?",
+    "context": "In the fictional Thistle laboratory handbook, the Thistle laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Thistle.",
+    "answer": "The Thistle laboratory opens at 14:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "umber",
+    "split": "validation",
+    "query": "When does the Umber laboratory open?",
+    "context": "In the fictional Umber laboratory handbook, the Umber laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Umber.",
+    "answer": "The Umber laboratory opens at 12:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "umber",
+    "split": "validation",
+    "query": "When does the Umber laboratory open?",
+    "context": "In the fictional Umber laboratory handbook, the Umber laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Umber.",
+    "answer": "The Umber laboratory opens at 15:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "violet",
+    "split": "validation",
+    "query": "When does the Violet laboratory open?",
+    "context": "In the fictional Violet laboratory handbook, the Violet laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Violet.",
+    "answer": "The Violet laboratory opens at 13:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "violet",
+    "split": "validation",
+    "query": "When does the Violet laboratory open?",
+    "context": "In the fictional Violet laboratory handbook, the Violet laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Violet.",
+    "answer": "The Violet laboratory opens at 08:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "willow",
+    "split": "validation",
+    "query": "When does the Willow laboratory open?",
+    "context": "In the fictional Willow laboratory handbook, the Willow laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Willow.",
+    "answer": "The Willow laboratory opens at 14:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "willow",
+    "split": "validation",
+    "query": "When does the Willow laboratory open?",
+    "context": "In the fictional Willow laboratory handbook, the Willow laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Willow.",
+    "answer": "The Willow laboratory opens at 09:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "xenia",
+    "split": "validation",
+    "query": "When does the Xenia laboratory open?",
+    "context": "In the fictional Xenia laboratory handbook, the Xenia laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Xenia.",
+    "answer": "The Xenia laboratory opens at 15:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "xenia",
+    "split": "validation",
+    "query": "When does the Xenia laboratory open?",
+    "context": "In the fictional Xenia laboratory handbook, the Xenia laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Xenia.",
+    "answer": "The Xenia laboratory opens at 10:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "yarrow",
+    "split": "test",
+    "query": "When does the Yarrow laboratory open?",
+    "context": "In the fictional Yarrow laboratory handbook, the Yarrow laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Yarrow.",
+    "answer": "The Yarrow laboratory opens at 08:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "yarrow",
+    "split": "test",
+    "query": "When does the Yarrow laboratory open?",
+    "context": "In the fictional Yarrow laboratory handbook, the Yarrow laboratory opens at 08:00. It closes at 19:00. The coordinator is Dr. Yarrow.",
+    "answer": "The Yarrow laboratory opens at 11:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "zinnia",
+    "split": "test",
+    "query": "When does the Zinnia laboratory open?",
+    "context": "In the fictional Zinnia laboratory handbook, the Zinnia laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Zinnia.",
+    "answer": "The Zinnia laboratory opens at 09:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "zinnia",
+    "split": "test",
+    "query": "When does the Zinnia laboratory open?",
+    "context": "In the fictional Zinnia laboratory handbook, the Zinnia laboratory opens at 09:00. It closes at 19:00. The coordinator is Dr. Zinnia.",
+    "answer": "The Zinnia laboratory opens at 12:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "amber",
+    "split": "test",
+    "query": "When does the Amber laboratory open?",
+    "context": "In the fictional Amber laboratory handbook, the Amber laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Amber.",
+    "answer": "The Amber laboratory opens at 10:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "amber",
+    "split": "test",
+    "query": "When does the Amber laboratory open?",
+    "context": "In the fictional Amber laboratory handbook, the Amber laboratory opens at 10:00. It closes at 19:00. The coordinator is Dr. Amber.",
+    "answer": "The Amber laboratory opens at 13:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "beryl",
+    "split": "test",
+    "query": "When does the Beryl laboratory open?",
+    "context": "In the fictional Beryl laboratory handbook, the Beryl laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Beryl.",
+    "answer": "The Beryl laboratory opens at 11:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "beryl",
+    "split": "test",
+    "query": "When does the Beryl laboratory open?",
+    "context": "In the fictional Beryl laboratory handbook, the Beryl laboratory opens at 11:00. It closes at 19:00. The coordinator is Dr. Beryl.",
+    "answer": "The Beryl laboratory opens at 14:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "coral",
+    "split": "test",
+    "query": "When does the Coral laboratory open?",
+    "context": "In the fictional Coral laboratory handbook, the Coral laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Coral.",
+    "answer": "The Coral laboratory opens at 12:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "coral",
+    "split": "test",
+    "query": "When does the Coral laboratory open?",
+    "context": "In the fictional Coral laboratory handbook, the Coral laboratory opens at 12:00. It closes at 19:00. The coordinator is Dr. Coral.",
+    "answer": "The Coral laboratory opens at 15:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "delta",
+    "split": "test",
+    "query": "When does the Delta laboratory open?",
+    "context": "In the fictional Delta laboratory handbook, the Delta laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Delta.",
+    "answer": "The Delta laboratory opens at 13:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "delta",
+    "split": "test",
+    "query": "When does the Delta laboratory open?",
+    "context": "In the fictional Delta laboratory handbook, the Delta laboratory opens at 13:00. It closes at 19:00. The coordinator is Dr. Delta.",
+    "answer": "The Delta laboratory opens at 08:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "ember",
+    "split": "test",
+    "query": "When does the Ember laboratory open?",
+    "context": "In the fictional Ember laboratory handbook, the Ember laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Ember.",
+    "answer": "The Ember laboratory opens at 14:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "ember",
+    "split": "test",
+    "query": "When does the Ember laboratory open?",
+    "context": "In the fictional Ember laboratory handbook, the Ember laboratory opens at 14:00. It closes at 19:00. The coordinator is Dr. Ember.",
+    "answer": "The Ember laboratory opens at 09:00.",
+    "hallucinated": 1
+  },
+  {
+    "group": "flint",
+    "split": "test",
+    "query": "When does the Flint laboratory open?",
+    "context": "In the fictional Flint laboratory handbook, the Flint laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Flint.",
+    "answer": "The Flint laboratory opens at 15:00.",
+    "hallucinated": 0
+  },
+  {
+    "group": "flint",
+    "split": "test",
+    "query": "When does the Flint laboratory open?",
+    "context": "In the fictional Flint laboratory handbook, the Flint laboratory opens at 15:00. It closes at 19:00. The coordinator is Dr. Flint.",
+    "answer": "The Flint laboratory opens at 10:00.",
+    "hallucinated": 1
+  }
+]
